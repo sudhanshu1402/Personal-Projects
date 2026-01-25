@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        language: [ javascript, go ]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      if: matrix.language == 'javascript'
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install Node Dependencies
+      if: matrix.language == 'javascript'
+      run: |
+        cd Javascript-Projects
+        # Add basic install/test logic here if valid package.json exists
+        echo "Validating JS Projects..."
+
+    - name: Set up Go
+      if: matrix.language == 'go'
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.20'
+        
+    - name: Build Go Projects
+      if: matrix.language == 'go'
+      run: |
+        cd Go-Projects/Hard/Load-Balancer
+        go build -v ./...

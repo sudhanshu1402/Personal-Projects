@@ -1,15 +1,20 @@
-# Microservices Demo
+# Microservices Demo with Spring Boot
 
 ## Overview
-A microservices architecture demo using Spring Boot, Eureka Server, and API Gateway.
+A comprehensive microservices architecture designed to demonstrate scalable backend systems. This project serves as a reference implementation for **Service Discovery**, **API Gateway pattern**, and **Distributed Tracing**.
 
-## Architecture
-- **Service Registry**: Eureka Server (verify active services)
-- **API Gateway**: Routes requests to specific microservices
-- **Order Service**: Handles order processing
-- **Product Service**: Manages inventory
+## Components
+- **Discovery Service (Eureka)**: Registry for all microservices.
+- **API Gateway (Spring Cloud Gateway)**: Unified entry point for external traffic.
+- **Order Service**: Functional domain service for order processing.
 
-## Technologies
-- Java 17
-- Spring Boot 3.0
-- Docker
+## Tech Stack
+- **Languages**: Java 17
+- **Framework**: Spring Boot 3, Spring Cloud
+- **Build Tool**: Maven
+- **Infrastructure**: Docker
+
+## Getting Started
+1. Run `mvn clean install`
+2. Start the Discovery Service first.
+3. Start the API Gateway and Order Service.
