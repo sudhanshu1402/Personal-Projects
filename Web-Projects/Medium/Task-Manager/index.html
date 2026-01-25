@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .app {
+            background: white;
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 70%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #f9f9f9;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .delete-btn {
+            background: #ff4444;
+            font-size: 0.8em;
+            padding: 4px 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <h2>My Tasks</h2>
+        <div>
+            <input type="text" id="taskInput" placeholder="New Task...">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script>
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const text = input.value;
+            if (text) {
+                const li = document.createElement('li');
+                li.innerHTML = `${text} <button class="delete-btn" onclick="this.parentElement.remove()">X</button>`;
+                document.getElementById('taskList').appendChild(li);
+                input.value = '';
+                saveTasks();
+            }
+        }
+        function saveTasks() {
+            // Placeholder for localStorage logic
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+[package]
+name = "celsius_fahrenheit"
+version = "0.1.0"
+edition = "2021"
