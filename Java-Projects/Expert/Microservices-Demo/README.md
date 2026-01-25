@@ -3,6 +3,21 @@
 ## Overview
 A comprehensive microservices architecture designed to demonstrate scalable backend systems. This project serves as a reference implementation for **Service Discovery**, **API Gateway pattern**, and **Distributed Tracing**.
 
+## Architecture
+
+```mermaid
+graph LR
+    Client -->|HTTP| Gateway[API Gateway :8080]
+    Gateway -->|Route| Order[Order Service]
+    Gateway -->|Route| Product[Product Service]
+    
+    subgraph Infrastructure
+        Gateway -.->|Register| Eureka[Eureka Discovery Server]
+        Order -.->|Register| Eureka
+        Product -.->|Register| Eureka
+    end
+```
+
 ## Components
 - **Discovery Service (Eureka)**: Registry for all microservices.
 - **API Gateway (Spring Cloud Gateway)**: Unified entry point for external traffic.
