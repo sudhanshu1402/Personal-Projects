@@ -14,6 +14,6 @@ class Product
 $products = [new Product("Laptop", 1000), new Product("Mouse", 20)];
 
 foreach ($products as $p) {
-    echo "Product: {$p->name} - ${$p->price}<br>";
+    echo "Product: {$p->name} - \${$p->price}<br>";
 }
 ?>
