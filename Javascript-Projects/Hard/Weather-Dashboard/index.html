@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #8ec5fc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Weather Dashboard</h1>
+        <input type="text" id="city" placeholder="Enter City">
+        <button onclick="getWeather()">Search</button>
+        <div id="result" style="margin-top: 20px;"></div>
+    </div>
+    <script>
+        async function getWeather() {
+            const city = document.getElementById('city').value;
+            // Mock API call
+            const mockData = { temp: 25, condition: 'Sunny' };
+            document.getElementById('result').innerHTML = `
+                <h2>${city}</h2>
+                <p>Temperature: ${mockData.temp}°C</p>
+                <p>Condition: ${mockData.condition}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>
