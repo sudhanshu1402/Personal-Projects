@@ -1,12 +1,34 @@
 # Forum
 
 ## Overview
-This is a **Hard** level project implemented in **PHP-Laravel**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Forum** is a **Hard** difficulty project implemented in **PHP-Laravel**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Forum
+└── index.php
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Forum[Forum]
+    Forum --> index_php(index.php)
+```
 
 ## Features
-- Implementation of Forum logic.
-- Clean and modular code structure.
+- Implements core logic for Forum.
+- Structured for scalability and readability.
+- Demonstrates **PHP-Laravel** best practices for **Hard** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Forum
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

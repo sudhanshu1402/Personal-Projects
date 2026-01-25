@@ -1,12 +1,34 @@
 # Web Server
 
 ## Overview
-This is a **Expert** level project implemented in **C**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Web Server** is a **Expert** difficulty project implemented in **C**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Web-Server
+└── main.c
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Web-Server[Web-Server]
+    Web_Server --> main_c(main.c)
+```
 
 ## Features
-- Implementation of Web Server logic.
-- Clean and modular code structure.
+- Implements core logic for Web Server.
+- Structured for scalability and readability.
+- Demonstrates **C** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Web-Server
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

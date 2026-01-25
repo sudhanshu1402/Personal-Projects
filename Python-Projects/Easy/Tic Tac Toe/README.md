@@ -1,14 +1,40 @@
-# TIC TAC TOE
+# Tic Tac Toe
 
-There will be two players in a game. Two signs represent each player. The general signs used in the game are X and O. Finally, there will be a board with 9 boxes.
-The gameplay will be as follows.
+## Overview
+**Tic Tac Toe** is a **Easy** difficulty project implemented in **Python**.
 
-- First, one user will place their sign in one of the available empty boxes.
-- Next, the second user will place their sign in one of the available empty boxes.
-- The goal of the players is to place their respective signs completely row-wise or column-wise, or diagonally.
-- The game goes on until a player wins the game or it ended up in a draw by filling all boxes without a winning match.
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
 
-## OUTPUT:
+```text
+Tic Tac Toe
+├── O.png
+├── Tic Tac Toe.py
+├── X.png
+└── tic tac opening.png
 
-- ![image](https://user-images.githubusercontent.com/99204211/213981783-9e0b2a7a-8292-4aab-ba6a-fd7ece57f943.png)
-- ![image](https://user-images.githubusercontent.com/99204211/213981848-77ef4c6f-e463-4c19-a82a-ea4e63f7abeb.png)
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Tic Tac Toe[Tic Tac Toe]
+    Tic_Tac_Toe --> O_png(O.png)
+    Tic_Tac_Toe --> X_png(X.png)
+    Tic_Tac_Toe --> tic_tac_opening_png(tic tac opening.png)
+    Tic_Tac_Toe --> Tic_Tac_Toe_py(Tic Tac Toe.py)
+```
+
+## Features
+- Implements core logic for Tic Tac Toe.
+- Structured for scalability and readability.
+- Demonstrates **Python** best practices for **Easy** complexity.
+
+## How to Run
+1. Navigate to the project directory:
+   ```bash
+   cd Tic Tac Toe
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

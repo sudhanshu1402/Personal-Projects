@@ -1,12 +1,34 @@
 # Ecommerce Backend
 
 ## Overview
-This is a **Expert** level project implemented in **C#**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Ecommerce Backend** is a **Expert** difficulty project implemented in **C#**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Ecommerce-Backend
+└── Startup.cs
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Ecommerce-Backend[Ecommerce-Backend]
+    Ecommerce_Backend --> Startup_cs(Startup.cs)
+```
 
 ## Features
-- Implementation of Ecommerce Backend logic.
-- Clean and modular code structure.
+- Implements core logic for Ecommerce Backend.
+- Structured for scalability and readability.
+- Demonstrates **C#** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Ecommerce-Backend
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

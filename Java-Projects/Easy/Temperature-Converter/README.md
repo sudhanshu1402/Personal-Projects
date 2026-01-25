@@ -1,12 +1,34 @@
 # Temperature Converter
 
 ## Overview
-This is a **Easy** level project implemented in **Java**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Temperature Converter** is a **Easy** difficulty project implemented in **Java**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Temperature-Converter
+└── TemperatureConverter.java
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Temperature-Converter[Temperature-Converter]
+    Temperature_Converter --> TemperatureConverter_java(TemperatureConverter.java)
+```
 
 ## Features
-- Implementation of Temperature Converter logic.
-- Clean and modular code structure.
+- Implements core logic for Temperature Converter.
+- Structured for scalability and readability.
+- Demonstrates **Java** best practices for **Easy** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Temperature-Converter
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

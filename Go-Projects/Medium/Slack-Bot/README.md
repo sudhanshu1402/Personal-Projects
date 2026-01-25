@@ -1,12 +1,34 @@
 # Slack Bot
 
 ## Overview
-This is a **Medium** level project implemented in **Go**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Slack Bot** is a **Medium** difficulty project implemented in **Go**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Slack-Bot
+└── main.go
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Slack-Bot[Slack-Bot]
+    Slack_Bot --> main_go(main.go)
+```
 
 ## Features
-- Implementation of Slack Bot logic.
-- Clean and modular code structure.
+- Implements core logic for Slack Bot.
+- Structured for scalability and readability.
+- Demonstrates **Go** best practices for **Medium** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Slack-Bot
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

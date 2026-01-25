@@ -1,12 +1,34 @@
 # Microservice Mesh
 
 ## Overview
-This is a **Expert** level project implemented in **Go**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Microservice Mesh** is a **Expert** difficulty project implemented in **Go**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Microservice-Mesh
+└── main.go
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Microservice-Mesh[Microservice-Mesh]
+    Microservice_Mesh --> main_go(main.go)
+```
 
 ## Features
-- Implementation of Microservice Mesh logic.
-- Clean and modular code structure.
+- Implements core logic for Microservice Mesh.
+- Structured for scalability and readability.
+- Demonstrates **Go** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Microservice-Mesh
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

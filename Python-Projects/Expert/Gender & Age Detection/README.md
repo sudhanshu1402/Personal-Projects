@@ -1,13 +1,50 @@
-# Gender And Age Determination
+# Gender & Age Detection
 
-Gender and Age Determination is a real time Deep Learning project, for as to accurately identify the gender and age of a person from a single image of a face. We will use the models trained by Tal Hassner and Gil Levi. The predicted gender may be one of ‘Male’ and ‘Female’, and the predicted age may be one of the following ranges- (0 – 2), (4 – 6), (8 – 12), (15 – 20), (25 – 32), (38 – 43), (48 – 53), (60 – 100) (8 nodes in the final softmax layer). It is very difficult to accurately guess an exact age from a single image because of factors like makeup, lighting, obstructions, and facial expressions. And so, we make this a classification problem instead of making it one of regression.
+## Overview
+**Gender & Age Detection** is a **Expert** difficulty project implemented in **Python**.
 
-## Libraries Used:
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
 
-- cv2
-- math
-- argparse
+```text
+Gender & Age Detection
+├── Output.jpg
+├── gad.py
+├── girl1.jpg
+├── girl2.jpg
+├── kid1.jpg
+├── man1.jpg
+├── minion.jpg
+├── woman1.jpg
+└── woman3.jpg
 
-## Output:
+```
 
-![image](https://user-images.githubusercontent.com/99204211/212667111-26c2ddf5-be49-411f-8db8-97b3de417a77.png)
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Gender & Age Detection[Gender & Age Detection]
+    Gender_&_Age_Detection --> minion_jpg(minion.jpg)
+    Gender_&_Age_Detection --> kid1_jpg(kid1.jpg)
+    Gender_&_Age_Detection --> gad_py(gad.py)
+    Gender_&_Age_Detection --> man1_jpg(man1.jpg)
+    Gender_&_Age_Detection --> girl2_jpg(girl2.jpg)
+    Gender_&_Age_Detection --> Output_jpg(Output.jpg)
+    Gender_&_Age_Detection --> girl1_jpg(girl1.jpg)
+    Gender_&_Age_Detection --> woman1_jpg(woman1.jpg)
+    Gender_&_Age_Detection --> woman3_jpg(woman3.jpg)
+```
+
+## Features
+- Implements core logic for Gender & Age Detection.
+- Structured for scalability and readability.
+- Demonstrates **Python** best practices for **Expert** complexity.
+
+## How to Run
+1. Navigate to the project directory:
+   ```bash
+   cd Gender & Age Detection
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

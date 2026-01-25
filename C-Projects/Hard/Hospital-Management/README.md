@@ -1,12 +1,34 @@
 # Hospital Management
 
 ## Overview
-This is a **Hard** level project implemented in **C**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Hospital Management** is a **Hard** difficulty project implemented in **C**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Hospital-Management
+└── main.c
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Hospital-Management[Hospital-Management]
+    Hospital_Management --> main_c(main.c)
+```
 
 ## Features
-- Implementation of Hospital Management logic.
-- Clean and modular code structure.
+- Implements core logic for Hospital Management.
+- Structured for scalability and readability.
+- Demonstrates **C** best practices for **Hard** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Hospital-Management
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

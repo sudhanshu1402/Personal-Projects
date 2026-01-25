@@ -1,12 +1,34 @@
 # Compiler Transpiler
 
 ## Overview
-This is a **Expert** level project implemented in **TypeScript**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Compiler Transpiler** is a **Expert** difficulty project implemented in **TypeScript**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Compiler-Transpiler
+└── compiler.ts
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Compiler-Transpiler[Compiler-Transpiler]
+    Compiler_Transpiler --> compiler_ts(compiler.ts)
+```
 
 ## Features
-- Implementation of Compiler Transpiler logic.
-- Clean and modular code structure.
+- Implements core logic for Compiler Transpiler.
+- Structured for scalability and readability.
+- Demonstrates **TypeScript** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Compiler-Transpiler
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

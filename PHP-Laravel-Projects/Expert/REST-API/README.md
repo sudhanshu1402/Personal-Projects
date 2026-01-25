@@ -1,12 +1,34 @@
 # REST API
 
 ## Overview
-This is a **Expert** level project implemented in **PHP-Laravel**.
-It demonstrates core concepts and best practices for this difficulty level.
+**REST API** is a **Expert** difficulty project implemented in **PHP-Laravel**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+REST-API
+└── index.php
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    REST-API[REST-API]
+    REST_API --> index_php(index.php)
+```
 
 ## Features
-- Implementation of REST API logic.
-- Clean and modular code structure.
+- Implements core logic for REST API.
+- Structured for scalability and readability.
+- Demonstrates **PHP-Laravel** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd REST-API
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

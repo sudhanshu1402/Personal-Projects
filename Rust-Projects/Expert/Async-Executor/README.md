@@ -1,12 +1,36 @@
 # Async Executor
 
 ## Overview
-This is a **Expert** level project implemented in **Rust**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Async Executor** is a **Expert** difficulty project implemented in **Rust**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Async-Executor
+├── Cargo.toml
+└── src
+    └── main.rs
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Async-Executor[Async-Executor]
+    Async_Executor --> Cargo_toml(Cargo.toml)
+```
 
 ## Features
-- Implementation of Async Executor logic.
-- Clean and modular code structure.
+- Implements core logic for Async Executor.
+- Structured for scalability and readability.
+- Demonstrates **Rust** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Async-Executor
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

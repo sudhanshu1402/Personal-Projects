@@ -1,12 +1,34 @@
 # Video Streaming Server
 
 ## Overview
-This is a **Expert** level project implemented in **Node.js**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Video Streaming Server** is a **Expert** difficulty project implemented in **Node.js**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Video-Streaming-Server
+└── index.js
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Video-Streaming-Server[Video-Streaming-Server]
+    Video_Streaming_Server --> index_js(index.js)
+```
 
 ## Features
-- Implementation of Video Streaming Server logic.
-- Clean and modular code structure.
+- Implements core logic for Video Streaming Server.
+- Structured for scalability and readability.
+- Demonstrates **Node.js** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Video-Streaming-Server
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

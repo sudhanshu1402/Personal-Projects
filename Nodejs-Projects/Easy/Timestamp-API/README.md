@@ -1,12 +1,34 @@
 # Timestamp API
 
 ## Overview
-This is a **Easy** level project implemented in **Node.js**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Timestamp API** is a **Easy** difficulty project implemented in **Node.js**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Timestamp-API
+└── index.js
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Timestamp-API[Timestamp-API]
+    Timestamp_API --> index_js(index.js)
+```
 
 ## Features
-- Implementation of Timestamp API logic.
-- Clean and modular code structure.
+- Implements core logic for Timestamp API.
+- Structured for scalability and readability.
+- Demonstrates **Node.js** best practices for **Easy** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Timestamp-API
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

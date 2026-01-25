@@ -1,12 +1,34 @@
 # TS ToDo CLI
 
 ## Overview
-This is a **Easy** level project implemented in **TypeScript**.
-It demonstrates core concepts and best practices for this difficulty level.
+**TS ToDo CLI** is a **Easy** difficulty project implemented in **TypeScript**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+TS-ToDo-CLI
+└── index.ts
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    TS-ToDo-CLI[TS-ToDo-CLI]
+    TS_ToDo_CLI --> index_ts(index.ts)
+```
 
 ## Features
-- Implementation of TS ToDo CLI logic.
-- Clean and modular code structure.
+- Implements core logic for TS ToDo CLI.
+- Structured for scalability and readability.
+- Demonstrates **TypeScript** best practices for **Easy** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd TS-ToDo-CLI
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

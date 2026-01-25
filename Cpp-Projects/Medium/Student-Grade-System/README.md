@@ -1,12 +1,34 @@
 # Student Grade System
 
 ## Overview
-This is a **Medium** level project implemented in **C++**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Student Grade System** is a **Medium** difficulty project implemented in **C++**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Student-Grade-System
+└── main.cpp
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Student-Grade-System[Student-Grade-System]
+    Student_Grade_System --> main_cpp(main.cpp)
+```
 
 ## Features
-- Implementation of Student Grade System logic.
-- Clean and modular code structure.
+- Implements core logic for Student Grade System.
+- Structured for scalability and readability.
+- Demonstrates **C++** best practices for **Medium** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Student-Grade-System
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

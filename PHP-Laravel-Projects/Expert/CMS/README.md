@@ -1,12 +1,34 @@
 # CMS
 
 ## Overview
-This is a **Expert** level project implemented in **PHP-Laravel**.
-It demonstrates core concepts and best practices for this difficulty level.
+**CMS** is a **Expert** difficulty project implemented in **PHP-Laravel**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+CMS
+└── index.php
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    CMS[CMS]
+    CMS --> index_php(index.php)
+```
 
 ## Features
-- Implementation of CMS logic.
-- Clean and modular code structure.
+- Implements core logic for CMS.
+- Structured for scalability and readability.
+- Demonstrates **PHP-Laravel** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd CMS
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

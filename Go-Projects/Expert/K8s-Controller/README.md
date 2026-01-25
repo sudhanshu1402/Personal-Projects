@@ -1,12 +1,34 @@
 # K8s Controller
 
 ## Overview
-This is a **Expert** level project implemented in **Go**.
-It demonstrates core concepts and best practices for this difficulty level.
+**K8s Controller** is a **Expert** difficulty project implemented in **Go**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+K8s-Controller
+└── main.go
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    K8s-Controller[K8s-Controller]
+    K8s_Controller --> main_go(main.go)
+```
 
 ## Features
-- Implementation of K8s Controller logic.
-- Clean and modular code structure.
+- Implements core logic for K8s Controller.
+- Structured for scalability and readability.
+- Demonstrates **Go** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd K8s-Controller
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

@@ -1,12 +1,36 @@
 # Blockchain Rust
 
 ## Overview
-This is a **Expert** level project implemented in **Rust**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Blockchain Rust** is a **Expert** difficulty project implemented in **Rust**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Blockchain-Rust
+├── Cargo.toml
+└── src
+    └── main.rs
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Blockchain-Rust[Blockchain-Rust]
+    Blockchain_Rust --> Cargo_toml(Cargo.toml)
+```
 
 ## Features
-- Implementation of Blockchain Rust logic.
-- Clean and modular code structure.
+- Implements core logic for Blockchain Rust.
+- Structured for scalability and readability.
+- Demonstrates **Rust** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Blockchain-Rust
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

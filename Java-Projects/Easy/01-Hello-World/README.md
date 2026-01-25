@@ -1,12 +1,32 @@
 # 01 Hello World
 
 ## Overview
-This is a **Easy** level project implemented in **Java**.
-It demonstrates core concepts and best practices for this difficulty level.
+**01 Hello World** is a **Easy** difficulty project implemented in **Java**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+01-Hello-World
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    01-Hello-World[01-Hello-World]
+```
 
 ## Features
-- Implementation of 01 Hello World logic.
-- Clean and modular code structure.
+- Implements core logic for 01 Hello World.
+- Structured for scalability and readability.
+- Demonstrates **Java** best practices for **Easy** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd 01-Hello-World
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

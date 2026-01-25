@@ -1,37 +1,98 @@
 # Mall Management System
 
-The project is on the topic MallManagementSystem. The menu driven program based on the concept of Object Oriented Programming has made mall management system simplerand easier. The system is easy andmoreover does not have too much application usage in it. By this system you can access into the mall information and browse into the mall. Main Objective of this mall Management System is to have an easy access intothe mall administration area , mall shop owner area or Customer related area of access in the mall management system. It includes employee details, inventory management details, shop list, shop details, overview of the shop, different access to different shops and their respective shop owner whose shop accountancy need to be maintained.All though mall management system shown in our project is easy and not so heavy use of application yet efficient at a modular level of management system. By this project we will be motivated and try our level best to work more on this topic and by learning from this project we will try create a project with much more utilities and resources included in future.
+## Overview
+**Mall Management System** is a **Hard** difficulty project implemented in **Java**.
 
-## Problem Statement
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
 
-Although the mall is named Palladium the name depicts and suggests that the mall is big And well renowned enough to reach to a larger audience. But the management of the Mall was questioned as it suffered a great loss. Because of which it was much of a Necessity for maintaining the records and everything else. This mall management System will solve the earlier problems of:
+```text
+Mall Management System
+├── 1st_floor.jpg
+├── 1st_floor.txt
+├── 2nd_floor.jpg
+├── 2nd_floor.txt
+├── 3rd_floor.jpg
+├── 3rd_floor.txt
+├── FinalTest1.java
+├── Mall Management System.pdf
+├── admin_up.txt
+├── emp_details.txt
+├── emp_detailss1.txt
+├── emp_detailss10.txt
+├── emp_detailss2.txt
+├── emp_detailss3.txt
+├── emp_detailss4.txt
+├── emp_detailss5.txt
+├── emp_detailss6.txt
+├── emp_detailss7.txt
+├── emp_detailss8.txt
+├── emp_detailss9.txt
+├── inv_detailss1.txt
+├── inv_detailss10.txt
+├── inv_detailss2.txt
+├── inv_detailss3.txt
+├── inv_detailss4.txt
+├── inv_detailss5.txt
+├── inv_detailss6.txt
+├── inv_detailss7.txt
+├── inv_detailss8.txt
+├── inv_detailss9.txt
+├── shop_details.txt
+├── shop_list.txt
+└── shop_owner_up.txt
 
-- Unorganized data entries.
-- Authentication problems.
-- Unaware of the shops an details
-- Inventory and Stock maintenance
-- Each and every Employment details.
+```
 
-## Objectives:
+## 📐 Components
+Visual representation of the primary files in this project:
 
-- Differentiate persons through login functionality
-- Display list of shops in the mall
-- Display Shop Inventory
-- Display Mall Employee
-- Display Shop Employee
-- Maintain record of the data
+```mermaid
+graph TD
+    Mall Management System[Mall Management System]
+    Mall_Management_System --> shop_owner_up_txt(shop_owner_up.txt)
+    Mall_Management_System --> 3rd_floor_jpg(3rd_floor.jpg)
+    Mall_Management_System --> emp_detailss9_txt(emp_detailss9.txt)
+    Mall_Management_System --> emp_detailss8_txt(emp_detailss8.txt)
+    Mall_Management_System --> shop_details_txt(shop_details.txt)
+    Mall_Management_System --> inv_detailss8_txt(inv_detailss8.txt)
+    Mall_Management_System --> shop_list_txt(shop_list.txt)
+    Mall_Management_System --> inv_detailss9_txt(inv_detailss9.txt)
+    Mall_Management_System --> emp_details_txt(emp_details.txt)
+    Mall_Management_System --> 3rd_floor_txt(3rd_floor.txt)
+    Mall_Management_System --> FinalTest1_java(FinalTest1.java)
+    Mall_Management_System --> Mall_Management_System_pdf(Mall Management System.pdf)
+    Mall_Management_System --> 1st_floor_jpg(1st_floor.jpg)
+    Mall_Management_System --> admin_up_txt(admin_up.txt)
+    Mall_Management_System --> inv_detailss10_txt(inv_detailss10.txt)
+    Mall_Management_System --> 2nd_floor_txt(2nd_floor.txt)
+    Mall_Management_System --> emp_detailss3_txt(emp_detailss3.txt)
+    Mall_Management_System --> inv_detailss4_txt(inv_detailss4.txt)
+    Mall_Management_System --> 1st_floor_txt(1st_floor.txt)
+    Mall_Management_System --> inv_detailss5_txt(inv_detailss5.txt)
+    Mall_Management_System --> emp_detailss2_txt(emp_detailss2.txt)
+    Mall_Management_System --> inv_detailss7_txt(inv_detailss7.txt)
+    Mall_Management_System --> inv_detailss6_txt(inv_detailss6.txt)
+    Mall_Management_System --> emp_detailss1_txt(emp_detailss1.txt)
+    Mall_Management_System --> emp_detailss10_txt(emp_detailss10.txt)
+    Mall_Management_System --> emp_detailss5_txt(emp_detailss5.txt)
+    Mall_Management_System --> inv_detailss2_txt(inv_detailss2.txt)
+    Mall_Management_System --> inv_detailss3_txt(inv_detailss3.txt)
+    Mall_Management_System --> emp_detailss4_txt(emp_detailss4.txt)
+    Mall_Management_System --> 2nd_floor_jpg(2nd_floor.jpg)
+    Mall_Management_System --> emp_detailss6_txt(emp_detailss6.txt)
+    Mall_Management_System --> inv_detailss1_txt(inv_detailss1.txt)
+    Mall_Management_System --> emp_detailss7_txt(emp_detailss7.txt)
+```
 
-## Class Diagram
+## Features
+- Implements core logic for Mall Management System.
+- Structured for scalability and readability.
+- Demonstrates **Java** best practices for **Hard** complexity.
 
-![image](https://user-images.githubusercontent.com/99204211/183295154-7fc8ea0c-aaf9-4dd9-8fbc-9d20564c5981.png)
-
-## Output
-
-![image](https://user-images.githubusercontent.com/99204211/183295202-111434a6-a998-44e3-9be1-0db97024629a.png)
-![image](https://user-images.githubusercontent.com/99204211/183295208-993c2af1-5931-4a56-a879-192341f6b953.png)
-![image](https://user-images.githubusercontent.com/99204211/183295212-a4dcd620-b1a9-46fe-9f89-7a13558a2cde.png)
-![image](https://user-images.githubusercontent.com/99204211/183295214-cda5e37f-24a1-4188-bb70-d080d7915598.png)
-![image](https://user-images.githubusercontent.com/99204211/183295217-a9a83652-1866-4353-93af-457d4725fbdb.png)
-![image](https://user-images.githubusercontent.com/99204211/183295222-b137512b-b9d5-4852-9cda-7b9476eaf490.png)
-![image](https://user-images.githubusercontent.com/99204211/183295236-d2229c1b-72bb-4312-b654-9a161ec40d04.png)
-![image](https://user-images.githubusercontent.com/99204211/183295249-832e9bbc-fcfa-4735-98fe-7b53430fd92a.png)
+## How to Run
+1. Navigate to the project directory:
+   ```bash
+   cd Mall Management System
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

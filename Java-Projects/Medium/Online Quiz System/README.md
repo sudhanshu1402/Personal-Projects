@@ -1,28 +1,68 @@
 # Online Quiz System
 
-Online Quiz system aims at providing an online comprehensive platform for management of quiz competitions as well as the individuals participating in quiz as a team. The users of the system include administrators, industrialists, institutions, organizations, academicians, and others.
-The project provides accessibility to the admins with valid user id and password. The user id and password are required for the admin to “log in” to the application.
-In Online Quiz system project, ‘N’ number of teams can be created and they can participate in a competition. Also, ‘N’ number of rounds can be played to finally declare a team as the winner. The teams with lower average marks are eliminated, and remaining teams compete in the next level. This process continues in the next round until the winner is declared.
+## Overview
+**Online Quiz System** is a **Medium** difficulty project implemented in **Java**.
 
-Participants are automatically given questions, and this is based on time limit. If the participant is unable to answer the question, negative marking is given. There is also a provision of rapid fire round.
-The scores obtained by each team are automatically updated. The task of handling of negative marking is done by the administrator. Furthermore, viewing and deleting the quiz results as well as automatic elimination of teams depending on their performance can be done.
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
 
-## Class Diagram
+```text
+Online Quiz System
+├── E-R diagram.png
+├── adminduties.jsp
+├── adminlogin.jsp
+├── architectural diagram of system based on modules.png
+├── checkanswer.jsp
+├── class diagram.png
+├── client server architecture.png
+├── endquiz.jsp
+├── next.jsp
+├── nextquiz.jsp
+├── nonpasson.jsp
+├── over.jsp
+├── proposed system architecture.png
+├── save.jsp
+├── score.jsp
+├── startquiz.jsp
+├── thanks.jsp
+└── user case diagram.png
 
-![class diagram](https://user-images.githubusercontent.com/99204211/183295636-9ae5e413-2601-4d4a-b1b2-98811579215f.png)
+```
 
-## Clent Server Arch
+## 📐 Components
+Visual representation of the primary files in this project:
 
-![client server architecture](https://user-images.githubusercontent.com/99204211/183295644-017f07fc-a473-47d1-b301-e7062faee976.png)
+```mermaid
+graph TD
+    Online Quiz System[Online Quiz System]
+    Online_Quiz_System --> proposed_system_architecture_png(proposed system architecture.png)
+    Online_Quiz_System --> score_jsp(score.jsp)
+    Online_Quiz_System --> nextquiz_jsp(nextquiz.jsp)
+    Online_Quiz_System --> user_case_diagram_png(user case diagram.png)
+    Online_Quiz_System --> architectural_diagram_of_system_based_on_modules_png(architectural diagram of system based on modules.png)
+    Online_Quiz_System --> next_jsp(next.jsp)
+    Online_Quiz_System --> thanks_jsp(thanks.jsp)
+    Online_Quiz_System --> nonpasson_jsp(nonpasson.jsp)
+    Online_Quiz_System --> save_jsp(save.jsp)
+    Online_Quiz_System --> E_R_diagram_png(E-R diagram.png)
+    Online_Quiz_System --> endquiz_jsp(endquiz.jsp)
+    Online_Quiz_System --> adminlogin_jsp(adminlogin.jsp)
+    Online_Quiz_System --> adminduties_jsp(adminduties.jsp)
+    Online_Quiz_System --> client_server_architecture_png(client server architecture.png)
+    Online_Quiz_System --> over_jsp(over.jsp)
+    Online_Quiz_System --> class_diagram_png(class diagram.png)
+    Online_Quiz_System --> checkanswer_jsp(checkanswer.jsp)
+    Online_Quiz_System --> startquiz_jsp(startquiz.jsp)
+```
 
-## ER Diagram
+## Features
+- Implements core logic for Online Quiz System.
+- Structured for scalability and readability.
+- Demonstrates **Java** best practices for **Medium** complexity.
 
-![E-R diagram](https://user-images.githubusercontent.com/99204211/183295647-40d5d339-6954-41ef-8ca2-0082947f91db.png)
-
-# Uses CAse Diagram
-
-![user case diagram](https://user-images.githubusercontent.com/99204211/183295653-4bc6d0b7-5415-40eb-bd0b-ff9bd83861b8.png)
-
-## Proposed Arch
-
-![proposed system architecture](https://user-images.githubusercontent.com/99204211/183295655-9f3492ba-b85b-4b42-8488-0db9376498d2.png)
+## How to Run
+1. Navigate to the project directory:
+   ```bash
+   cd Online Quiz System
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

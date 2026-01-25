@@ -1,12 +1,34 @@
 # Simple Shell
 
 ## Overview
-This is a **Expert** level project implemented in **C**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Simple Shell** is a **Expert** difficulty project implemented in **C**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Simple-Shell
+└── main.c
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Simple-Shell[Simple-Shell]
+    Simple_Shell --> main_c(main.c)
+```
 
 ## Features
-- Implementation of Simple Shell logic.
-- Clean and modular code structure.
+- Implements core logic for Simple Shell.
+- Structured for scalability and readability.
+- Demonstrates **C** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Simple-Shell
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

@@ -1,12 +1,34 @@
 # Memory Allocator
 
 ## Overview
-This is a **Expert** level project implemented in **C++**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Memory Allocator** is a **Expert** difficulty project implemented in **C++**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Memory-Allocator
+└── main.cpp
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Memory-Allocator[Memory-Allocator]
+    Memory_Allocator --> main_cpp(main.cpp)
+```
 
 ## Features
-- Implementation of Memory Allocator logic.
-- Clean and modular code structure.
+- Implements core logic for Memory Allocator.
+- Structured for scalability and readability.
+- Demonstrates **C++** best practices for **Expert** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Memory-Allocator
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

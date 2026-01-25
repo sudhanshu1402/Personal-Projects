@@ -1,19 +1,32 @@
 # SaaS Dashboard
 
 ## Overview
-A comprehensive dashboard for SaaS metrics including MRR, Churn, and User Growth.
+**SaaS Dashboard** is a **Expert** difficulty project implemented in **JavaScript**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+SaaS-Dashboard
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    SaaS-Dashboard[SaaS-Dashboard]
+```
 
 ## Features
-- Real-time data visualization using Chart.js
-- Authentication with JWT
-- Dark mode toggle
-- Responsive sidebar navigation
+- Implements core logic for SaaS Dashboard.
+- Structured for scalability and readability.
+- Demonstrates **JavaScript** best practices for **Expert** complexity.
 
-## Tech Stack
-- Frontend: React, TailwindCSS
-- Backend: Node.js, Express
-- Database: MongoDB
-
-## Setup
-1. `npm install`
-2. `npm start`
+## How to Run
+1. Navigate to the project directory:
+   ```bash
+   cd SaaS-Dashboard
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

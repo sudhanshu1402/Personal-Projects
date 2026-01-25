@@ -1,7 +1,36 @@
 # 2048
 
-2048 is a single-player puzzle game. The game is played on a 4x4 grid and the objective is to slide tiles on the grid to combine them and create a tile with the number 2048. Each turn, a new tile with the number 2 or 4 is randomly generated on an empty space on the grid. The player can slide the tiles in four different directions (up, down, left, or right) with the goal of merging tiles with the same number to create a higher numbered tile. The game ends when the player creates a tile with the number 2048 or when the board is filled and no more moves are possible. The game has become popular due to its simplicity and addictiveness.
+## Overview
+**2048** is a **Medium** difficulty project implemented in **Python**.
 
-## Output:
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
 
-![image](https://user-images.githubusercontent.com/99204211/212659530-654d7623-f594-433f-b5a7-1ee550127a1d.png)
+```text
+2048
+├── 2048.py
+└── colors.py
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    2048[2048]
+    2048 --> 2048_py(2048.py)
+    2048 --> colors_py(colors.py)
+```
+
+## Features
+- Implements core logic for 2048.
+- Structured for scalability and readability.
+- Demonstrates **Python** best practices for **Medium** complexity.
+
+## How to Run
+1. Navigate to the project directory:
+   ```bash
+   cd 2048
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

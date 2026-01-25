@@ -1,12 +1,34 @@
 # URL Shortener
 
 ## Overview
-This is a **Medium** level project implemented in **Node.js**.
-It demonstrates core concepts and best practices for this difficulty level.
+**URL Shortener** is a **Medium** difficulty project implemented in **Node.js**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+URL-Shortener
+└── index.js
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    URL-Shortener[URL-Shortener]
+    URL_Shortener --> index_js(index.js)
+```
 
 ## Features
-- Implementation of URL Shortener logic.
-- Clean and modular code structure.
+- Implements core logic for URL Shortener.
+- Structured for scalability and readability.
+- Demonstrates **Node.js** best practices for **Medium** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd URL-Shortener
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

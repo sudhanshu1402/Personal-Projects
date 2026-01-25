@@ -1,14 +1,36 @@
-# COUNT DOWN TIMER
+# Count Down Timer
 
-A countdown timer is a virtual clock on a landing page that counts down from a certain number or date to indicate the beginning or end of an event or offer.
+## Overview
+**Count Down Timer** is a **Easy** difficulty project implemented in **Python**.
 
-## Libraries Used:
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
 
-- plyer > notification
-- tkinter > messagebox
-- tkinter
-- time
+```text
+Count Down Timer
+├── Count Down Timer.py
+└── bell.ico
 
-## Output:
+```
 
-![image](https://user-images.githubusercontent.com/99204211/212642728-b91e2357-22cf-40e2-bde5-e79f5bc1315f.png
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Count Down Timer[Count Down Timer]
+    Count_Down_Timer --> bell_ico(bell.ico)
+    Count_Down_Timer --> Count_Down_Timer_py(Count Down Timer.py)
+```
+
+## Features
+- Implements core logic for Count Down Timer.
+- Structured for scalability and readability.
+- Demonstrates **Python** best practices for **Easy** complexity.
+
+## How to Run
+1. Navigate to the project directory:
+   ```bash
+   cd Count Down Timer
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

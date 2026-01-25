@@ -1,12 +1,34 @@
 # File Metadata
 
 ## Overview
-This is a **Easy** level project implemented in **Node.js**.
-It demonstrates core concepts and best practices for this difficulty level.
+**File Metadata** is a **Easy** difficulty project implemented in **Node.js**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+File-Metadata
+└── index.js
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    File-Metadata[File-Metadata]
+    File_Metadata --> index_js(index.js)
+```
 
 ## Features
-- Implementation of File Metadata logic.
-- Clean and modular code structure.
+- Implements core logic for File Metadata.
+- Structured for scalability and readability.
+- Demonstrates **Node.js** best practices for **Easy** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd File-Metadata
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

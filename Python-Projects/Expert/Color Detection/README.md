@@ -1,11 +1,40 @@
 # Color Detection
 
-Colour detection is the process of detecting the name of any color. Simple isn’t it? Well, for humans this is an extremely easy task but for computers, it is not straightforward. Human eyes and brains work together to translate light into color. Light receptors that are present in our eyes transmit the signal to the brain. Our brain then recognizes the color. Since childhood, we have mapped certain lights with their color names. We have used somewhat same strategy to detect color names.
-In the project color detection , we have build an application through which user can automatically get the name of the color by clicking on them.
+## Overview
+**Color Detection** is a **Expert** difficulty project implemented in **Python**.
 
-## Libraries used
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
 
-- Open CV
-- Pandas
-- Argparse
-- CSV
+```text
+Color Detection
+├── Color_Detection.py
+├── colorpic.jpg
+├── colorpic2.jpg
+└── colors.csv
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Color Detection[Color Detection]
+    Color_Detection --> colorpic_jpg(colorpic.jpg)
+    Color_Detection --> colorpic2_jpg(colorpic2.jpg)
+    Color_Detection --> Color_Detection_py(Color_Detection.py)
+    Color_Detection --> colors_csv(colors.csv)
+```
+
+## Features
+- Implements core logic for Color Detection.
+- Structured for scalability and readability.
+- Demonstrates **Python** best practices for **Expert** complexity.
+
+## How to Run
+1. Navigate to the project directory:
+   ```bash
+   cd Color Detection
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

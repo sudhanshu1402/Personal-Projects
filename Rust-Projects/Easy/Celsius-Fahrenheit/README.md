@@ -1,12 +1,36 @@
 # Celsius Fahrenheit
 
 ## Overview
-This is a **Easy** level project implemented in **Rust**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Celsius Fahrenheit** is a **Easy** difficulty project implemented in **Rust**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Celsius-Fahrenheit
+├── Cargo.toml
+└── src
+    └── main.rs
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Celsius-Fahrenheit[Celsius-Fahrenheit]
+    Celsius_Fahrenheit --> Cargo_toml(Cargo.toml)
+```
 
 ## Features
-- Implementation of Celsius Fahrenheit logic.
-- Clean and modular code structure.
+- Implements core logic for Celsius Fahrenheit.
+- Structured for scalability and readability.
+- Demonstrates **Rust** best practices for **Easy** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Celsius-Fahrenheit
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

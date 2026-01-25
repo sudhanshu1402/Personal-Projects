@@ -1,12 +1,36 @@
 # Guessing Game
 
 ## Overview
-This is a **Easy** level project implemented in **Rust**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Guessing Game** is a **Easy** difficulty project implemented in **Rust**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Guessing-Game
+├── Cargo.toml
+└── src
+    └── main.rs
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Guessing-Game[Guessing-Game]
+    Guessing_Game --> Cargo_toml(Cargo.toml)
+```
 
 ## Features
-- Implementation of Guessing Game logic.
-- Clean and modular code structure.
+- Implements core logic for Guessing Game.
+- Structured for scalability and readability.
+- Demonstrates **Rust** best practices for **Easy** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Guessing-Game
+   ```
+2. Check the source code for entry points (e.g., `main` run command).

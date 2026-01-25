@@ -1,12 +1,34 @@
 # Stopwatch
 
 ## Overview
-This is a **Easy** level project implemented in **C++**.
-It demonstrates core concepts and best practices for this difficulty level.
+**Stopwatch** is a **Easy** difficulty project implemented in **C++**.
+
+## 📂 Project Structure
+The following directory structure visualizes the file organization of this project.
+
+```text
+Stopwatch
+└── main.cpp
+
+```
+
+## 📐 Components
+Visual representation of the primary files in this project:
+
+```mermaid
+graph TD
+    Stopwatch[Stopwatch]
+    Stopwatch --> main_cpp(main.cpp)
+```
 
 ## Features
-- Implementation of Stopwatch logic.
-- Clean and modular code structure.
+- Implements core logic for Stopwatch.
+- Structured for scalability and readability.
+- Demonstrates **C++** best practices for **Easy** complexity.
 
 ## How to Run
-Check the source files for the entry point (e.g., main file or index file).
+1. Navigate to the project directory:
+   ```bash
+   cd Stopwatch
+   ```
+2. Check the source code for entry points (e.g., `main` run command).
