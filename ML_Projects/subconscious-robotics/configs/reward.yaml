@@ -1,0 +1,39 @@
+# Multi-objective Reward Configuration
+# Reward Shaper uses weighted sum: R = Σ(weight_i * component_i)
+
+reward:
+  # Reward component weights
+  weights:
+    task_completion: 10.0
+    distance_to_goal: 1.0
+    energy_penalty: -0.01
+    stability: 0.5
+    smoothness: 0.1
+    collision_penalty: -5.0
+    time_penalty: -0.001
+  
+  # Reward shaping options
+  shaping:
+    normalize: true
+    clip_min: -10.0
+    clip_max: 10.0
+    scale: 1.0
+  
+  # Sparse vs Dense
+  sparse_reward: false
+  
+  # Goal-based reward parameters
+  goal:
+    success_threshold: 0.05  # meters
+    success_bonus: 100.0
+
+# Curriculum learning (optional)
+curriculum:
+  enabled: false
+  stages:
+    - difficulty: 0.3
+      timesteps: 100000
+    - difficulty: 0.6
+      timesteps: 200000
+    - difficulty: 1.0
+      timesteps: null

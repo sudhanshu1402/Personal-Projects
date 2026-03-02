@@ -1,0 +1,32 @@
+defaults:
+  - physics
+  - reward
+  - agent
+  - _self_
+
+# Core settings
+project_name: subconscious_robotics
+seed: 42
+
+# Environment
+env:
+  urdf_path: assets/quadruped.urdf
+  time_step: 0.00416667  # 240 Hz
+  max_episode_steps: 1000
+  enable_rendering: false
+
+# Training
+training:
+  algorithm: ppo  # ppo or sac
+  total_timesteps: 1000000
+  n_envs: 4
+  save_freq: 50000  # Checkpoint every 50k steps
+  log_dir: outputs/logs
+  checkpoint_dir: outputs/checkpoints
+
+# Evaluation
+eval:
+  n_episodes: 10
+  render: true
+  deterministic: true
+

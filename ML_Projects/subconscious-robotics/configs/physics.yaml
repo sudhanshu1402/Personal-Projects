@@ -1,0 +1,39 @@
+# Domain Randomization Parameters
+# These values define the ranges for sim-to-real transfer
+
+domain_randomization:
+  enabled: true
+  
+  # Mass randomization (multiplier on default mass) - ±15% for leg segments
+  mass:
+    enabled: true
+    range: [0.85, 1.15]
+  
+  # Friction coefficient randomization
+  friction:
+    enabled: true
+    lateral_range: [0.5, 1.5]
+    spinning_range: [0.3, 0.8]
+    rolling_range: [0.001, 0.01]
+  
+  # Gravity randomization (m/s^2)
+  gravity:
+    enabled: true
+    range: [-10.5, -9.0]
+  
+  # Joint dynamics randomization
+  joint_damping:
+    enabled: true
+    range: [0.8, 1.2]
+  
+  # Observation noise
+  observation_noise:
+    enabled: true
+    position_std: 0.001
+    velocity_std: 0.01
+
+# PyBullet physics parameters
+physics:
+  solver_iterations: 50
+  contact_breaking_threshold: 0.02
+  enable_cone_friction: true

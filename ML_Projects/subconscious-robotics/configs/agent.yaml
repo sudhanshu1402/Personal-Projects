@@ -1,0 +1,50 @@
+# Agent Hyperparameters
+# Configures PPO/SAC algorithms and network architecture
+
+agent:
+  # Network architecture
+  policy_type: mlp  # mlp or cnn
+  
+  # MLP architecture
+  mlp:
+    net_arch:
+      pi: [256, 256, 128]  # Policy network
+      vf: [256, 256, 128]  # Value function
+    activation: tanh
+  
+  # CNN architecture (for image observations)
+  cnn:
+    features_dim: 256
+    net_arch: [256, 128]
+
+# PPO Hyperparameters
+ppo:
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  clip_range_vf: null
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  use_sde: false
+  sde_sample_freq: -1
+
+# SAC Hyperparameters
+sac:
+  learning_rate: 0.0003
+  buffer_size: 1000000
+  learning_starts: 10000
+  batch_size: 256
+  tau: 0.005
+  gamma: 0.99
+  train_freq: 1
+  gradient_steps: 1
+  ent_coef: auto
+  target_update_interval: 1
+  target_entropy: auto
+  use_sde: false
+  sde_sample_freq: -1

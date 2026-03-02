@@ -1,0 +1,149 @@
+[2026-02-08 23:09:17,334][src.models.device_utils][INFO] - 🍎 Apple Metal Performance Shaders (MPS) activated
+[2026-02-08 23:09:17,334][src.models.device_utils][INFO] -    Optimized for M1/M2/M3 Neural Engine
+[2026-02-08 23:09:17,335][src.models.device_utils][INFO] -    ✓ MPS tensor allocation verified
+[2026-02-08 23:09:17,335][src.models.device_utils][INFO] - 🍎 Apple Metal Performance Shaders (MPS) activated
+[2026-02-08 23:09:17,335][src.models.device_utils][INFO] -    Optimized for M1/M2/M3 Neural Engine
+[2026-02-08 23:09:17,335][src.models.device_utils][INFO] -    ✓ MPS tensor allocation verified
+[2026-02-08 23:09:17,335][src.models.device_utils][INFO] - Warming up mps...
+[2026-02-08 23:09:18,559][src.models.device_utils][INFO] - ✓ mps warmup complete
+[2026-02-08 23:09:18,559][__main__][INFO] - 🚀 FAST MODE: Running headless at maximum speed
+[2026-02-08 23:09:18,565][__main__][INFO] - 
+domain_randomization:
+  enabled: true
+  mass:
+    enabled: true
+    range:
+    - 0.85
+    - 1.15
+  friction:
+    enabled: true
+    lateral_range:
+    - 0.5
+    - 1.5
+    spinning_range:
+    - 0.3
+    - 0.8
+    rolling_range:
+    - 0.001
+    - 0.01
+  gravity:
+    enabled: true
+    range:
+    - -10.5
+    - -9.0
+  joint_damping:
+    enabled: true
+    range:
+    - 0.8
+    - 1.2
+  observation_noise:
+    enabled: true
+    position_std: 0.001
+    velocity_std: 0.01
+physics:
+  solver_iterations: 50
+  contact_breaking_threshold: 0.02
+  enable_cone_friction: true
+reward:
+  weights:
+    task_completion: 10.0
+    distance_to_goal: 1.0
+    energy_penalty: -0.01
+    stability: 0.5
+    smoothness: 0.1
+    collision_penalty: -5.0
+    time_penalty: -0.001
+  shaping:
+    normalize: true
+    clip_min: -10.0
+    clip_max: 10.0
+    scale: 1.0
+  sparse_reward: false
+  goal:
+    success_threshold: 0.05
+    success_bonus: 100.0
+curriculum:
+  enabled: false
+  stages:
+  - difficulty: 0.3
+    timesteps: 100000
+  - difficulty: 0.6
+    timesteps: 200000
+  - difficulty: 1.0
+    timesteps: null
+agent:
+  policy_type: mlp
+  mlp:
+    net_arch:
+      pi:
+      - 256
+      - 256
+      - 128
+      vf:
+      - 256
+      - 256
+      - 128
+    activation: tanh
+  cnn:
+    features_dim: 256
+    net_arch:
+    - 256
+    - 128
+ppo:
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  clip_range_vf: null
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  use_sde: false
+  sde_sample_freq: -1
+sac:
+  learning_rate: 0.0003
+  buffer_size: 1000000
+  learning_starts: 10000
+  batch_size: 256
+  tau: 0.005
+  gamma: 0.99
+  train_freq: 1
+  gradient_steps: 1
+  ent_coef: auto
+  target_update_interval: 1
+  target_entropy: auto
+  use_sde: false
+  sde_sample_freq: -1
+project_name: subconscious_robotics
+seed: 42
+env:
+  urdf_path: assets/quadruped.urdf
+  time_step: 0.00416667
+  max_episode_steps: 1000
+  enable_rendering: false
+training:
+  algorithm: ppo
+  total_timesteps: 1000000
+  n_envs: 4
+  save_freq: 50000
+  log_dir: outputs/logs
+  checkpoint_dir: outputs/checkpoints
+eval:
+  n_episodes: 10
+  render: true
+  deterministic: true
+
+[2026-02-08 23:09:18,570][__main__][INFO] - Creating 4 environment(s)...
+[2026-02-08 23:09:20,020][__main__][INFO] - Initializing PPO on mps...
+[2026-02-08 23:09:21,453][__main__][INFO] - 📹 Video recording enabled: outputs/logs/quadruped_ppo_20260208_230918/videos
+[2026-02-08 23:09:21,458][src.env.base_env][INFO] - QuadrupedEnv initialized with 8 joints
+[2026-02-08 23:09:21,459][__main__][INFO] - ============================================================
+[2026-02-08 23:09:21,459][__main__][INFO] - 🚀 Starting training for 1,000,000 timesteps...
+[2026-02-08 23:09:21,459][__main__][INFO] - 📊 TensorBoard: tensorboard --logdir outputs/logs/quadruped_ppo_20260208_230918/tensorboard
+[2026-02-08 23:09:21,459][__main__][INFO] - 📹 Videos: outputs/logs/quadruped_ppo_20260208_230918/videos
+[2026-02-08 23:09:21,459][__main__][INFO] - ============================================================
+[2026-02-08 23:10:21,021][__main__][WARNING] - ⚠️ Training interrupted
+[2026-02-08 23:10:21,086][__main__][INFO] - ✅ Model saved: outputs/logs/quadruped_ppo_20260208_230918/final_model.zip
