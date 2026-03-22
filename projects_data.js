@@ -1,5 +1,15 @@
 const PROJECT_DATA = [
     {
+        "name": "Subconscious Robotics",
+        "category": "ML/AI",
+        "isHero": true,
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "ml-projects/subconscious-robotics",
+        "actionUrl": "https://github.com/sudhanshu1402/personal-projects/tree/main/ml-projects/subconscious-robotics",
+        "actionText": "View Source Code"
+    },
+    {
         "name": "BMI Calculator",
         "category": "Python",
         "difficulty": "Easy",
@@ -171,10 +181,11 @@ const PROJECT_DATA = [
         "actionText": "View Source Code"
     },
     {
-        "name": "manageit",
+        "name": "Photo Manager",
         "category": "Java",
+        "isHero": true,
         "difficulty": "Hard",
-        "type": "Backend / CLI",
+        "type": "Android App",
         "path": "java-projects/hard/photo-manager/app/src/main/java/com/example/sudhanshusingh/manageit",
         "actionUrl": "https://github.com/sudhanshu1402/personal-projects/tree/main/java-projects/hard/photo-manager/app/src/main/java/com/example/sudhanshusingh/manageit",
         "actionText": "View Source Code"
@@ -686,6 +697,7 @@ const PROJECT_DATA = [
     {
         "name": "Personal Portfolio",
         "category": "Javascript",
+        "isHero": true,
         "difficulty": "Easy",
         "type": "Frontend UI",
         "path": "javascript-projects/easy/personal-portfolio",
@@ -704,6 +716,7 @@ const PROJECT_DATA = [
     {
         "name": "Kanban Board",
         "category": "Javascript",
+        "isHero": true,
         "difficulty": "Expert",
         "type": "Frontend UI",
         "path": "javascript-projects/expert/kanban-board",

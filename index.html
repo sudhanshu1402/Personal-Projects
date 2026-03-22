@@ -342,6 +342,23 @@
             color: var(--text-primary);
         }
 
+        /* --- Hero Badge --- */
+        .hero-badge {
+            position: absolute;
+            top: 2rem;
+            right: -2.5rem;
+            background: linear-gradient(135deg, #F59E0B, #D97706);
+            color: white;
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.25rem 3rem;
+            transform: rotate(45deg);
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+            letter-spacing: 0.1em;
+            z-index: 10;
+        }
+
         /* --- Responsive --- */
         @media (max-width: 900px) {
             nav, .hero, .filters, .vault-grid {
@@ -383,6 +400,7 @@
     <main>
         <div class="filters" id="filters">
             <button class="filter-btn active" data-filter="all">ALL DEPLOYMENTS</button>
+            <button class="filter-btn" data-filter="ML/AI">ML / AI</button>
             <button class="filter-btn" data-filter="Python">PYTHON</button>
             <button class="filter-btn" data-filter="Java">JAVA</button>
             <button class="filter-btn" data-filter="Go">GO-LANG</button>
@@ -421,6 +439,7 @@
                 if(proj.difficulty === 'Medium') diffColor = '#60A5FA'; // Blue
 
                 card.innerHTML = `
+                    ${proj.isHero ? '<div class="hero-badge">★ ELITE</div>' : ''}
                     <div class="card-top">
                         <span class="project-id">ID_${(index + 1).toString().padStart(3, '0')}</span>
                         <span class="difficulty-tag" style="border-color: ${diffColor}; color: ${diffColor}">${proj.difficulty}</span>
