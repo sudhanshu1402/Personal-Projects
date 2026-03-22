@@ -1,0 +1,2 @@
+compile = "javac $(find . -name '*.java')"
+run = "java $(grep -rl 'public static void main' . | head -n 1 | sed 's/\\.\\///' | sed 's/\\.java//' | tr '/' '.')"

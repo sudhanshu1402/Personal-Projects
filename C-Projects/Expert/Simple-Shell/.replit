@@ -1,0 +1,2 @@
+compile = "gcc $(find . -name '*.c') -o main"
+run = "./main"
