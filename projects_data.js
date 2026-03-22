@@ -689,7 +689,7 @@ const PROJECT_DATA = [
         "difficulty": "Easy",
         "type": "Frontend UI",
         "path": "javascript-projects/easy/personal-portfolio",
-        "actionUrl": "Javascript-Projects/Easy/Personal-Portfolio/index.html?title=Personal%20Portfolio",
+        "actionUrl": "javascript-projects/easy/personal-portfolio/index.html?title=Personal%20Portfolio",
         "actionText": "Launch Interface"
     },
     {
@@ -698,7 +698,7 @@ const PROJECT_DATA = [
         "difficulty": "Easy",
         "type": "Frontend UI",
         "path": "javascript-projects/easy/quiz-page",
-        "actionUrl": "Javascript-Projects/Easy/Quiz Page/index.html?title=Quiz%20Page",
+        "actionUrl": "javascript-projects/easy/quiz-page/index.html?title=Quiz%20Page",
         "actionText": "Launch Interface"
     },
     {
@@ -707,7 +707,7 @@ const PROJECT_DATA = [
         "difficulty": "Expert",
         "type": "Frontend UI",
         "path": "javascript-projects/expert/kanban-board",
-        "actionUrl": "Javascript-Projects/Expert/Kanban-Board/index.html?title=Kanban%20Board",
+        "actionUrl": "javascript-projects/expert/kanban-board/index.html?title=Kanban%20Board",
         "actionText": "Launch Interface"
     },
     {
@@ -716,7 +716,7 @@ const PROJECT_DATA = [
         "difficulty": "Hard",
         "type": "Frontend UI",
         "path": "javascript-projects/hard/furnicto",
-        "actionUrl": "Javascript-Projects/Hard/Furnicto/index.html?title=Furnicto",
+        "actionUrl": "javascript-projects/hard/furnicto/index.html?title=Furnicto",
         "actionText": "Launch Interface"
     },
     {
@@ -725,7 +725,7 @@ const PROJECT_DATA = [
         "difficulty": "Hard",
         "type": "Frontend UI",
         "path": "javascript-projects/hard/weather-dashboard",
-        "actionUrl": "Javascript-Projects/Hard/Weather-Dashboard/index.html?title=Weather%20Dashboard",
+        "actionUrl": "javascript-projects/hard/weather-dashboard/index.html?title=Weather%20Dashboard",
         "actionText": "Launch Interface"
     },
     {
@@ -734,7 +734,7 @@ const PROJECT_DATA = [
         "difficulty": "Medium",
         "type": "Frontend UI",
         "path": "javascript-projects/medium/decibell",
-        "actionUrl": "Javascript-Projects/Medium/Decibell/index.html?title=Decibell",
+        "actionUrl": "javascript-projects/medium/decibell/index.html?title=Decibell",
         "actionText": "Launch Interface"
     },
     {
@@ -743,7 +743,7 @@ const PROJECT_DATA = [
         "difficulty": "Medium",
         "type": "Frontend UI",
         "path": "javascript-projects/medium/task-manager",
-        "actionUrl": "Javascript-Projects/Medium/Task-Manager/index.html?title=Task%20Manager",
+        "actionUrl": "javascript-projects/medium/task-manager/index.html?title=Task%20Manager",
         "actionText": "Launch Interface"
     }
 ];
