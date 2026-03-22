@@ -27,9 +27,12 @@ jobs:
       - name: Isolate Frontend Projects
         run: |
           mkdir _gh_pages
-          # Only copy the Javascript projects to preserve the exact URL directory structure
+          # Copy the JS projects preserving structure
           cp -r Javascript-Projects _gh_pages/
-          # Optional: Copy the README to serve at the root
+          # Copy the stunning new Web UI directory portal
+          cp index.html _gh_pages/
+          cp projects_data.js _gh_pages/
+          # Optional fallback
           cp README.md _gh_pages/ || true
           
       - name: Setup Pages

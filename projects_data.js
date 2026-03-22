@@ -1,0 +1,749 @@
+const PROJECT_DATA = [
+    {
+        "name": "BMI Calculator",
+        "category": "Python",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Easy/BMI Calculator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FEasy%2FBMI%20Calculator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Count Down Timer",
+        "category": "Python",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Easy/Count Down Timer",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FEasy%2FCount%20Down%20Timer",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Currency",
+        "category": "Python",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Easy/Currency",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FEasy%2FCurrency",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Tic Tac Toe",
+        "category": "Python",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Easy/Tic Tac Toe",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FEasy%2FTic%20Tac%20Toe",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Color Detection",
+        "category": "Python",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Expert/Color Detection",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FExpert%2FColor%20Detection",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Gender & Age Detection",
+        "category": "Python",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Expert/Gender & Age Detection",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FExpert%2FGender%20%26%20Age%20Detection",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Keyboard Jump Game",
+        "category": "Python",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Expert/Keyboard Jump Game",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FExpert%2FKeyboard%20Jump%20Game",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Fruit Ninja Game",
+        "category": "Python",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Hard/Fruit Ninja Game",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FHard%2FFruit%20Ninja%20Game",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "UNO",
+        "category": "Python",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Hard/UNO",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FHard%2FUNO",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "2048",
+        "category": "Python",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Medium/2048",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FMedium%2F2048",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Circo",
+        "category": "Python",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Medium/Circo",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FMedium%2FCirco",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Dev Hiring Test",
+        "category": "Python",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Medium/Library Management System/Dev Hiring Test",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FMedium%2FLibrary%20Management%20System%2FDev%20Hiring%20Test",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Ping Pong Game",
+        "category": "Python",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Medium/Ping Pong Game",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FMedium%2FPing%20Pong%20Game",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Speed Typing Test",
+        "category": "Python",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Medium/Speed Typing Test",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FMedium%2FSpeed%20Typing%20Test",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Sudoku",
+        "category": "Python",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Python-Projects/Medium/Sudoku",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Python-Projects%2FMedium%2FSudoku",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Temperature Converter",
+        "category": "Java",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Easy/Temperature-Converter",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FEasy%2FTemperature-Converter",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Stock Trading Engine",
+        "category": "Java",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Expert/Stock-Trading-Engine",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FExpert%2FStock-Trading-Engine",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Mall Management System",
+        "category": "Java",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Hard/Mall Management System",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FHard%2FMall%20Management%20System",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "manageit",
+        "category": "Java",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Hard/Photo Manager/app/src/androidTest/java/com/example/sudhanshusingh/manageit",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FHard%2FPhoto%20Manager%2Fapp%2Fsrc%2FandroidTest%2Fjava%2Fcom%2Fexample%2Fsudhanshusingh%2Fmanageit",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "manageit",
+        "category": "Java",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Hard/Photo Manager/app/src/main/java/com/example/sudhanshusingh/manageit",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FHard%2FPhoto%20Manager%2Fapp%2Fsrc%2Fmain%2Fjava%2Fcom%2Fexample%2Fsudhanshusingh%2Fmanageit",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "manageit",
+        "category": "Java",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Hard/Photo Manager/app/src/test/java/com/example/sudhanshusingh/manageit",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FHard%2FPhoto%20Manager%2Fapp%2Fsrc%2Ftest%2Fjava%2Fcom%2Fexample%2Fsudhanshusingh%2Fmanageit",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "scientificcalc",
+        "category": "Java",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Medium/Scientific Calculator/app/src/androidTest/java/com/sudhanshusingh/scientificcalc",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FMedium%2FScientific%20Calculator%2Fapp%2Fsrc%2FandroidTest%2Fjava%2Fcom%2Fsudhanshusingh%2Fscientificcalc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "sudhanshusinghCalculator",
+        "category": "Java",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Medium/Scientific Calculator/app/src/main/java/com/sudhanshusingh/sudhanshusinghCalculator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FMedium%2FScientific%20Calculator%2Fapp%2Fsrc%2Fmain%2Fjava%2Fcom%2Fsudhanshusingh%2FsudhanshusinghCalculator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "scientificcalc",
+        "category": "Java",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Java-Projects/Medium/Scientific Calculator/app/src/test/java/com/dataflair/scientificcalc",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Java-Projects%2FMedium%2FScientific%20Calculator%2Fapp%2Fsrc%2Ftest%2Fjava%2Fcom%2Fdataflair%2Fscientificcalc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Calendar",
+        "category": "C",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "C-Projects/Easy/Calendar",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=C-Projects%2FEasy%2FCalendar",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Number Guessing Game",
+        "category": "C",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "C-Projects/Easy/Number-Guessing-Game",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=C-Projects%2FEasy%2FNumber-Guessing-Game",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Simple Shell",
+        "category": "C",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "C-Projects/Expert/Simple-Shell",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=C-Projects%2FExpert%2FSimple-Shell",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Web Server",
+        "category": "C",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "C-Projects/Expert/Web-Server",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=C-Projects%2FExpert%2FWeb-Server",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Bank System",
+        "category": "C",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "C-Projects/Hard/Bank-System",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=C-Projects%2FHard%2FBank-System",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Hospital Management",
+        "category": "C",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "C-Projects/Hard/Hospital-Management",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=C-Projects%2FHard%2FHospital-Management",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Phonebook System",
+        "category": "C",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "C-Projects/Medium/Phonebook-System",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=C-Projects%2FMedium%2FPhonebook-System",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Voting System",
+        "category": "C",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "C-Projects/Medium/Voting System",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=C-Projects%2FMedium%2FVoting%20System",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Simple Calculator",
+        "category": "Cpp",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Easy/Simple-Calculator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FEasy%2FSimple-Calculator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Stopwatch",
+        "category": "Cpp",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Easy/Stopwatch",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FEasy%2FStopwatch",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Unit Converter",
+        "category": "Cpp",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Easy/Unit-Converter",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FEasy%2FUnit-Converter",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Memory Allocator",
+        "category": "Cpp",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Expert/Memory-Allocator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FExpert%2FMemory-Allocator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Trading Simulator",
+        "category": "Cpp",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Expert/Trading-Simulator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FExpert%2FTrading-Simulator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Bank Management",
+        "category": "Cpp",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Hard/Bank-Management",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FHard%2FBank-Management",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "College Management System",
+        "category": "Cpp",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Hard/College Management System",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FHard%2FCollege%20Management%20System",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Scientific Calculator",
+        "category": "Cpp",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Medium/Scientific Calculator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FMedium%2FScientific%20Calculator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Student Grade System",
+        "category": "Cpp",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Cpp-Projects/Medium/Student-Grade-System",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Cpp-Projects%2FMedium%2FStudent-Grade-System",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "src",
+        "category": "Rust",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Rust-Projects/Easy/Celsius-Fahrenheit/src",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Rust-Projects%2FEasy%2FCelsius-Fahrenheit%2Fsrc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "src",
+        "category": "Rust",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Rust-Projects/Easy/Guessing-Game/src",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Rust-Projects%2FEasy%2FGuessing-Game%2Fsrc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "src",
+        "category": "Rust",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Rust-Projects/Expert/Async-Executor/src",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Rust-Projects%2FExpert%2FAsync-Executor%2Fsrc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "src",
+        "category": "Rust",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Rust-Projects/Expert/Blockchain-Rust/src",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Rust-Projects%2FExpert%2FBlockchain-Rust%2Fsrc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "src",
+        "category": "Rust",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Rust-Projects/Hard/Chat-Server/src",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Rust-Projects%2FHard%2FChat-Server%2Fsrc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "src",
+        "category": "Rust",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Rust-Projects/Hard/File-Compressor/src",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Rust-Projects%2FHard%2FFile-Compressor%2Fsrc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "src",
+        "category": "Rust",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Rust-Projects/Medium/Calculator/src",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Rust-Projects%2FMedium%2FCalculator%2Fsrc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "src",
+        "category": "Rust",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Rust-Projects/Medium/ToDo-CLI/src",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Rust-Projects%2FMedium%2FToDo-CLI%2Fsrc",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Hello Server",
+        "category": "Go",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Go-Projects/Easy/Hello-Server",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Go-Projects%2FEasy%2FHello-Server",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Number Guess",
+        "category": "Go",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Go-Projects/Easy/Number-Guess",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Go-Projects%2FEasy%2FNumber-Guess",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "K8s Controller",
+        "category": "Go",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Go-Projects/Expert/K8s-Controller",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Go-Projects%2FExpert%2FK8s-Controller",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Microservice Mesh",
+        "category": "Go",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Go-Projects/Expert/Microservice-Mesh",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Go-Projects%2FExpert%2FMicroservice-Mesh",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Distributed Cache",
+        "category": "Go",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Go-Projects/Hard/Distributed-Cache",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Go-Projects%2FHard%2FDistributed-Cache",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Load Balancer",
+        "category": "Go",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Go-Projects/Hard/Load-Balancer",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Go-Projects%2FHard%2FLoad-Balancer",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "CRUD API",
+        "category": "Go",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Go-Projects/Medium/CRUD-API",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Go-Projects%2FMedium%2FCRUD-API",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Slack Bot",
+        "category": "Go",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Go-Projects/Medium/Slack-Bot",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Go-Projects%2FMedium%2FSlack-Bot",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Console Calculator",
+        "category": "CSharp",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "CSharp-Projects/Easy/Console-Calculator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=CSharp-Projects%2FEasy%2FConsole-Calculator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Number Guess",
+        "category": "CSharp",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "CSharp-Projects/Easy/Number-Guess",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=CSharp-Projects%2FEasy%2FNumber-Guess",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Ecommerce Backend",
+        "category": "CSharp",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "CSharp-Projects/Expert/Ecommerce-Backend",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=CSharp-Projects%2FExpert%2FEcommerce-Backend",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Stock Simulator",
+        "category": "CSharp",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "CSharp-Projects/Expert/Stock-Simulator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=CSharp-Projects%2FExpert%2FStock-Simulator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Chat App",
+        "category": "CSharp",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "CSharp-Projects/Hard/Chat-App",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=CSharp-Projects%2FHard%2FChat-App",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Inventory System",
+        "category": "CSharp",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "CSharp-Projects/Hard/Inventory-System",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=CSharp-Projects%2FHard%2FInventory-System",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Expense Tracker",
+        "category": "CSharp",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "CSharp-Projects/Medium/Expense-Tracker",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=CSharp-Projects%2FMedium%2FExpense-Tracker",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "TS Calculator",
+        "category": "Typescript",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Typescript-Projects/Easy/TS-Calculator",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Typescript-Projects%2FEasy%2FTS-Calculator",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "TS ToDo CLI",
+        "category": "Typescript",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Typescript-Projects/Easy/TS-ToDo-CLI",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Typescript-Projects%2FEasy%2FTS-ToDo-CLI",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Compiler Transpiler",
+        "category": "Typescript",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Typescript-Projects/Expert/Compiler-Transpiler",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Typescript-Projects%2FExpert%2FCompiler-Transpiler",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "GraphQL Federation",
+        "category": "Typescript",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Typescript-Projects/Expert/GraphQL-Federation",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Typescript-Projects%2FExpert%2FGraphQL-Federation",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "NestJS Blog",
+        "category": "Typescript",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Typescript-Projects/Hard/NestJS-Blog",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Typescript-Projects%2FHard%2FNestJS-Blog",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Express TS API",
+        "category": "Typescript",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Typescript-Projects/Medium/Express-TS-API",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Typescript-Projects%2FMedium%2FExpress-TS-API",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "File Metadata",
+        "category": "Nodejs",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Nodejs-Projects/Easy/File-Metadata",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Nodejs-Projects%2FEasy%2FFile-Metadata",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Timestamp API",
+        "category": "Nodejs",
+        "difficulty": "Easy",
+        "type": "Backend / CLI",
+        "path": "Nodejs-Projects/Easy/Timestamp-API",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Nodejs-Projects%2FEasy%2FTimestamp-API",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Real Time Chat",
+        "category": "Nodejs",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Nodejs-Projects/Expert/Real-Time-Chat",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Nodejs-Projects%2FExpert%2FReal-Time-Chat",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Video Streaming Server",
+        "category": "Nodejs",
+        "difficulty": "Expert",
+        "type": "Backend / CLI",
+        "path": "Nodejs-Projects/Expert/Video-Streaming-Server",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Nodejs-Projects%2FExpert%2FVideo-Streaming-Server",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Blog API",
+        "category": "Nodejs",
+        "difficulty": "Hard",
+        "type": "Backend / CLI",
+        "path": "Nodejs-Projects/Hard/Blog-API",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Nodejs-Projects%2FHard%2FBlog-API",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "URL Shortener",
+        "category": "Nodejs",
+        "difficulty": "Medium",
+        "type": "Backend / CLI",
+        "path": "Nodejs-Projects/Medium/URL-Shortener",
+        "actionUrl": "https://replit.com/github/sudhanshu1402/Personal-Projects?folder=Nodejs-Projects%2FMedium%2FURL-Shortener",
+        "actionText": "Execute in Replit"
+    },
+    {
+        "name": "Personal Portfolio",
+        "category": "Javascript",
+        "difficulty": "Easy",
+        "type": "Frontend UI",
+        "path": "Javascript-Projects/Easy/Personal-Portfolio",
+        "actionUrl": "Javascript-Projects/Easy/Personal-Portfolio/index.html",
+        "actionText": "Launch Interface"
+    },
+    {
+        "name": "Quiz Page",
+        "category": "Javascript",
+        "difficulty": "Easy",
+        "type": "Frontend UI",
+        "path": "Javascript-Projects/Easy/Quiz Page",
+        "actionUrl": "Javascript-Projects/Easy/Quiz Page/index.html",
+        "actionText": "Launch Interface"
+    },
+    {
+        "name": "Kanban Board",
+        "category": "Javascript",
+        "difficulty": "Expert",
+        "type": "Frontend UI",
+        "path": "Javascript-Projects/Expert/Kanban-Board",
+        "actionUrl": "Javascript-Projects/Expert/Kanban-Board/index.html",
+        "actionText": "Launch Interface"
+    },
+    {
+        "name": "Furnicto",
+        "category": "Javascript",
+        "difficulty": "Hard",
+        "type": "Frontend UI",
+        "path": "Javascript-Projects/Hard/Furnicto",
+        "actionUrl": "Javascript-Projects/Hard/Furnicto/index.html",
+        "actionText": "Launch Interface"
+    },
+    {
+        "name": "Weather Dashboard",
+        "category": "Javascript",
+        "difficulty": "Hard",
+        "type": "Frontend UI",
+        "path": "Javascript-Projects/Hard/Weather-Dashboard",
+        "actionUrl": "Javascript-Projects/Hard/Weather-Dashboard/index.html",
+        "actionText": "Launch Interface"
+    },
+    {
+        "name": "Decibell",
+        "category": "Javascript",
+        "difficulty": "Medium",
+        "type": "Frontend UI",
+        "path": "Javascript-Projects/Medium/Decibell",
+        "actionUrl": "Javascript-Projects/Medium/Decibell/index.html",
+        "actionText": "Launch Interface"
+    },
+    {
+        "name": "Task Manager",
+        "category": "Javascript",
+        "difficulty": "Medium",
+        "type": "Frontend UI",
+        "path": "Javascript-Projects/Medium/Task-Manager",
+        "actionUrl": "Javascript-Projects/Medium/Task-Manager/index.html",
+        "actionText": "Launch Interface"
+    }
+];

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vault | Sudhanshu Singh</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <script src="projects_data.js"></script>
+
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #0a0a0a;
+            --surface-hover: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: # --font-display: 'Syne', sans-serif;
+            --font-body: 'Manrope', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* Nav */
+        nav {
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+        }
+
+        .brand {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero */
+        header.hero {
+            padding: 10rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(4rem, 8vw, 7rem);
+            font-weight: 800;
+            line-height: 0.9;
+            letter-spacing: -2px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 span {
+            color: var(--text-secondary);
+        }
+
+        .hero p {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        /* Main App Container */
+        main {
+            padding: 0 4rem 8rem 4rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Filter System */
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: capitalize;
+        }
+
+        .filter-btn:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active {
+            background: var(--text-primary);
+            color: var(--bg);
+            border-color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Project Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 250px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            background: var(--surface-hover);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-header {
+            margin-bottom: 2rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            font-weight: 500;
+        }
+
+        .card h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover .card-footer {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .action-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .action-text {
+            color: var(--text-primary);
+        }
+
+        .arrow {
+            width: 24px;
+            height: 24px;
+            background: var(--text-primary);
+            color: var(--bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            opacity: 0.5;
+        }
+
+        .card:hover .arrow {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+
+            header.hero,
+            main,
+            nav {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="brand">SS / The Vault</div>
+        <div class="nav-links">
+            <a href="https://github.com/sudhanshu1402">GitHub</a>
+            <a href="https://linkedin.com/in/sudhanshusingh1402">LinkedIn</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Archive <span>83</span></h1>
+        <p>A comprehensive, interactively indexable vault containing 83 historical projects spanning 10 programming
+            languages. From raw C++ compilers to React ecosystems.</p>
+    </header>
+
+    <main>
+        <div class="filters" id="filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="Python">Python</button>
+            <button class="filter-btn" data-filter="Java">Java</button>
+            <button class="filter-btn" data-filter="Cpp">C++</button>
+            <button class="filter-btn" data-filter="Nodejs">Node.JS</button>
+            <button class="filter-btn" data-filter="Javascript">Frontend UI</button>
+            <button class="filter-btn" data-filter="Rust">Rust</button>
+            <button class="filter-btn" data-filter="Go">Go</button>
+        </div>
+
+        <div class="grid" id="grid">
+            <!-- Populated via Javascript -->
+        </div>
+    </main>
+
+    <script>
+        // Ensure PROJECT_DATA exists
+        const data = typeof PROJECT_DATA !== 'undefined' ? PROJECT_DATA : [];
+        const grid = document.getElementById('grid');
+        const filtersContainer = document.getElementById('filters');
+
+        function renderCards(projects) {
+            grid.innerHTML = '';
+            projects.forEach((proj, index) => {
+                const card = document.createElement('a');
+                card.href = proj.actionUrl;
+                card.target = "_blank";
+                card.className = 'card';
+                // Staggered animation
+                card.style.animationDelay = `${(index % 15) * 0.05}s`;
+                
+                let difficultyColor = '#888';
+                if(proj.difficulty === 'Expert') difficultyColor = '#FF4500';
+                if(proj.difficulty === 'Hard') difficultyColor = '#FFB800';
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="card-meta">
+                            <span>${proj.category}</span>
+                            <span class="badge" style="color: ${difficultyColor}; border-color: ${difficultyColor}">${proj.difficulty}</span>
+                        </div>
+                        <h2>${proj.name}</h2>
+                    </div>
+                    <div class="card-footer">
+                        <span class="action-text">${proj.actionText}</span>
+                        <div class="arrow">→</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Initial render
+        renderCards(data);
+
+        // Filter Logic
+        filtersContainer.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                // Update active state
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+
+                // Filter logic
+                const filter = e.target.getAttribute('data-filter');
+                if (filter === 'all') {
+                    renderCards(data);
+                } else if (filter === 'Javascript') {
+                    renderCards(data.filter(p => p.category === 'Javascript'));
+                } else {
+                    renderCards(data.filter(p => p.category === filter));
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
