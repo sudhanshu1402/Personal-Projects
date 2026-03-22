@@ -1,12 +1,10 @@
-# DATA STRUCTURE AND ALGORITHMS
+# Data-Structure-And-Algorithms
 
-This repository contains a collection of Data Structure Algorithms
+> **Note:** This repository is part of my public learning archive. For my active, production-grade work, please see my pinned repositories on my [GitHub Profile](https://github.com/sudhanshu1402).
 
-- Array
-- Fundamental
-- Linked List
-- Projects
-- Searching
-- Sorting
-- Stack
-- Strings
+This repository contains code written during my college studies and self-study focused on **Data Structures and Algorithms**. I keep this public for complete transparency, documenting my technical progression from early implementations to my current architectural work in distributed systems.
+
+## Overview
+- **Core Technology:** Algorithms and Data Structures 
+- **Timeframe:** College / Early Self-Study
+- **Primary Focus:** Foundational concepts, problem-solving, and complexity analysis

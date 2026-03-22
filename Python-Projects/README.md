@@ -1,18 +1,10 @@
-# PYTHON PROJECTS
+# Python-Projects
 
-This repository contains a collection of Python Projects
+> **Note:** This repository is part of my public learning archive. For my active, production-grade work, please see my pinned repositories on my [GitHub Profile](https://github.com/sudhanshu1402).
 
-- 2048
-- BMI Calculator
-- Circo
-- Color Detection
-- Count Down Timer
-- Currency
-- Fruit Ninja Game
-- Gender & Age Detection
-- Keyboard Jump Game
-- Ping Pong Game
-- Speed Typing Test
-- Sudoku
-- Tic Tac Toe
-- UNO
+This repository contains code written during my college studies and self-study focused on **Python**. I keep this public for complete transparency, documenting my technical progression from early implementations to my current architectural work in distributed systems.
+
+## Overview
+- **Core Technology:** Python
+- **Timeframe:** College / Early Self-Study
+- **Primary Focus:** Foundational scripting, automation, and basic backend concepts

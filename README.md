@@ -34,6 +34,20 @@ Recruiters & Engineers, start here! These projects demonstrate production-level 
 This repo uses **GitHub Actions** for automated build and testing.
 - [View Workflow](./.github/workflows/ci.yml)
 
+<!-- PAGES_AUTO_GENERATE_START -->
+
+### JavaScript (Static UIs)
+
+| Project Name | Source Code | Play Live (Web) |
+| :--- | :--- | :--- |
+| **Personal-Portfolio** | [📂 View Source](https://github.com/sudhanshu1402/Personal-Projects/tree/main/Javascript-Projects/Easy/Personal-Portfolio) | [🌐 View Live on GitHub Pages](https://sudhanshu1402.github.io/Personal-Projects/Javascript-Projects/Easy/Personal-Portfolio/index.html) |
+| **Quiz Page** | [📂 View Source](https://github.com/sudhanshu1402/Personal-Projects/tree/main/Javascript-Projects/Easy/Quiz Page) | [🌐 View Live on GitHub Pages](https://sudhanshu1402.github.io/Personal-Projects/Javascript-Projects/Easy/Quiz Page/index.html) |
+| **Kanban-Board** | [📂 View Source](https://github.com/sudhanshu1402/Personal-Projects/tree/main/Javascript-Projects/Expert/Kanban-Board) | [🌐 View Live on GitHub Pages](https://sudhanshu1402.github.io/Personal-Projects/Javascript-Projects/Expert/Kanban-Board/index.html) |
+| **Furnicto** | [📂 View Source](https://github.com/sudhanshu1402/Personal-Projects/tree/main/Javascript-Projects/Hard/Furnicto) | [🌐 View Live on GitHub Pages](https://sudhanshu1402.github.io/Personal-Projects/Javascript-Projects/Hard/Furnicto/index.html) |
+| **Weather-Dashboard** | [📂 View Source](https://github.com/sudhanshu1402/Personal-Projects/tree/main/Javascript-Projects/Hard/Weather-Dashboard) | [🌐 View Live on GitHub Pages](https://sudhanshu1402.github.io/Personal-Projects/Javascript-Projects/Hard/Weather-Dashboard/index.html) |
+| **Task-Manager** | [📂 View Source](https://github.com/sudhanshu1402/Personal-Projects/tree/main/Javascript-Projects/Medium/Task-Manager) | [🌐 View Live on GitHub Pages](https://sudhanshu1402.github.io/Personal-Projects/Javascript-Projects/Medium/Task-Manager/index.html) |
+
+<!-- PAGES_AUTO_GENERATE_END -->
 <!-- PROJECTS_AUTO_GENERATE_START -->
 ## 🚀 Live Interactive Projects (Zero-Config)
 
