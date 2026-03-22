@@ -1,0 +1,30 @@
+name: Promote to Root Portfolio
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'index.html'
+      - 'projects_data.js'
+  workflow_dispatch:
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Pushes to Root Repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.PROMOTE_TOKEN }}
+        with:
+          source-directory: '.'
+          destination-github-username: 'sudhanshu1402'
+          destination-repository-name: 'sudhanshu1402.github.io'
+          user-email: 'sudhanshusingh1402@gmail.com'
+          target-branch: 'main'
+          target-directory: '.'
+          # Explicitly only sync the UI core files
+          create-target-directory: true

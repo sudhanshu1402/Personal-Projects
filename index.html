@@ -58,6 +58,135 @@
             pointer-events: none;
         }
 
+        /* --- Audit Terminal --- */
+        #audit-terminal {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 320px;
+            height: 180px;
+            z-index: 1000;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+        }
+
+        .terminal-header {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .terminal-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #94a3b8;
+        }
+
+        .terminal-title {
+            margin-left: 1rem;
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.1rem;
+        }
+
+        #terminal-content {
+            padding: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent-primary);
+            overflow-y: auto;
+            flex: 1;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .log-line {
+            margin-bottom: 0.4rem;
+            opacity: 0;
+            animation: fadeInLog 0.3s forwards;
+        }
+
+        @keyframes fadeInLog {
+            to { opacity: 0.8; transform: translateY(0); }
+        }
+
+        .log-line:nth-child(1) { animation-delay: 0.5s; }
+        .log-line:nth-child(2) { animation-delay: 1.2s; }
+        .log-line:nth-child(3) { animation-delay: 1.8s; }
+        .log-line:nth-child(4) { animation-delay: 2.4s; }
+        .log-line:nth-child(5) { animation-delay: 3s; }
+
+        @media (max-width: 768px) {
+            #audit-terminal { display: none; }
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .terminal-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #94a3b8;
+        }
+
+        .terminal-title {
+            margin-left: 1rem;
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.1rem;
+        }
+
+        #terminal-content {
+            padding: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent-primary);
+            overflow-y: auto;
+            flex: 1;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .log-line {
+            margin-bottom: 0.4rem;
+            opacity: 0;
+            animation: fadeInLog 0.3s forwards;
+        }
+
+        @keyframes fadeInLog {
+            to { opacity: 0.8; transform: translateY(0); }
+        }
+
+        .log-line:nth-child(1) { animation-delay: 0.5s; }
+        .log-line:nth-child(2) { animation-delay: 1.2s; }
+        .log-line:nth-child(3) { animation-delay: 1.8s; }
+        .log-line:nth-child(4) { animation-delay: 2.4s; }
+        .log-line:nth-child(5) { animation-delay: 3s; }
+
+        @media (max-width: 768px) {
+            #audit-terminal { display: none; }
+        }
+
         /* --- Custom Cursor --- */
         #cursor-dot {
             width: 6px;
@@ -376,6 +505,23 @@
     <div id="cursor-dot"></div>
     <div id="cursor-outline"></div>
 
+    <!-- --- Audit Log Terminal --- -->
+    <div id="audit-terminal" class="glass">
+        <div class="terminal-header">
+            <div class="terminal-dots">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="terminal-title">AUDIT_LOG_STREAM</div>
+        </div>
+        <div id="terminal-content">
+            <div class="log-line">> BOOTING VAULT_OS v2.1... OK</div>
+            <div class="log-line">> RESTORING PASCAL_CASE (JAVA)... OK</div>
+            <div class="log-line">> ANALYZING RUST_EXECUTOR... 100%</div>
+            <div class="log-line">> SYNCING GLOBAL_DATA... DONE</div>
+            <div class="log-line">> ALL SYSTEMS OPTIMAL.</div>
+        </div>
+    </div>
+
     <nav>
         <div class="brand">S. Singh / ARCHIVE</div>
         <div class="nav-links">
@@ -511,4 +657,3 @@
     </script>
 </body>
 </html>
-l>
