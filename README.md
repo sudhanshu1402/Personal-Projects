@@ -3,6 +3,7 @@
 > ### 🛑 STOP & VIEW THE LIVE PORTFOLIO 🛑
 > **This repository is best viewed through its custom interactive frontend.**
 > **👉 [Launch The Vault Portfolio ➔](https://sudhanshu1402.github.io/personal-projects/)**
+> **🌐 [Visit My Full Profile ➔](https://sudhanshu1402.github.io/)**
 
 ---
 

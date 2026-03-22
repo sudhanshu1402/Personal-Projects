@@ -11,16 +11,16 @@
     <script src="projects_data.js?v=vault-v2.1"></script>
     <style>
         :root {
-            --bg: #030303;
-            --surface: #0a0a0a;
-            --surface-raised: #111111;
-            --border: rgba(255, 255, 255, 0.05);
-            --border-bright: rgba(255, 255, 255, 0.12);
-            --text-primary: #f0f0f0;
-            --text-secondary: #a0a0a0;
-            --text-muted: #666666;
-            --accent-primary: #4F46E5; /* Electric Indigo */
-            --accent-glow: rgba(79, 70, 229, 0.3);
+            --bg: #F9FAFB;
+            --surface: #FFFFFF;
+            --surface-raised: #F3F4F6;
+            --border: rgba(0, 0, 0, 0.08);
+            --border-bright: rgba(0, 0, 0, 0.15);
+            --text-primary: #111827;
+            --text-secondary: #4B5563;
+            --text-muted: #9CA3AF;
+            --accent-primary: #2563EB; /* Electric Blue */
+            --accent-glow: rgba(37, 99, 235, 0.2);
             --font-display: 'Syne', sans-serif;
             --font-body: 'Outfit', sans-serif;
             --font-mono: 'Space Grotesk', monospace;
@@ -52,7 +52,8 @@
             width: 100vw;
             height: 100vh;
             background: url("https://grainy-gradients.vercel.app/noise.svg");
-            opacity: 0.05;
+            opacity: 0.15;
+            mix-blend-mode: multiply;
             z-index: 9999;
             pointer-events: none;
         }
@@ -81,7 +82,7 @@
 
         /* --- Global Elements --- */
         .glass {
-            background: rgba(10, 10, 10, 0.7);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--border);
@@ -97,8 +98,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            align-items: center;
             z-index: 1000;
-            mix-blend-mode: difference;
         }
 
         .brand {
@@ -206,7 +207,7 @@
         }
 
         .filter-btn {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(0, 0, 0, 0.02);
             border: 1px solid var(--border);
             color: var(--text-secondary);
             padding: 0.6rem 1.2rem;
@@ -221,7 +222,7 @@
         .filter-btn:hover {
             border-color: var(--border-bright);
             color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.05);
         }
 
         .filter-btn.active {
@@ -259,7 +260,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+            background: radial-gradient(circle at var(--mouseX) var(--mouseY), rgba(0, 0, 0, 0.04) 0%, transparent 60%);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -267,7 +268,7 @@
         .project-card:hover {
             border-color: var(--border-bright);
             transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
         }
 
         .project-card:hover::after {
