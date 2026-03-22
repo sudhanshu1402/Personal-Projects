@@ -3,37 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Sudhanshu Singh | Backend & Infrastructure Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bold display font and technical mono font -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;500;800;900&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-        header { background: #333; color: #fff; padding: 20px; text-align: center; }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1, h2 { color: #333; }
-        .project { border-bottom: 1px solid #ccc; padding: 10px 0; }
-        footer { text-align: center; padding: 10px; color: #777; }
+        :root {
+            --bg-color: #050505;
+            --text-primary: #f0f0f0;
+            --text-secondary: #888888;
+            --accent: #FF4500; /* Aggressive technical orange */
+            --grid-color: rgba(255, 255, 255, 0.05);
+            
+            --font-display: 'Outfit', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            --padding-edge: clamp(1.5rem, 5vw, 4rem);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-display);
+            line-height: 1.6;
+            overflow-x: hidden;
+            
+            /* Technical Grid Background */
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: center center;
+        }
+
+        /* Utility */
+        .mono {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--padding-edge);
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        /* Header / Nav */
+        header {
+            padding: 2rem var(--padding-edge);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--grid-color);
+            position: sticky;
+            top: 0;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Subtly mask the grid at the top */
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+
+        .hero-label {
+            display: inline-block;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            width: max-content;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -2px;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .hero h1 span:hover {
+            color: var(--text-primary);
+            -webkit-text-stroke: 1px transparent;
+        }
+
+        .hero p.lead {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            max-width: 800px;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+
+        /* Content Blocks */
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 4rem;
+            gap: 2rem;
+            border-bottom: 1px solid var(--grid-color);
+            padding-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+        
+        .section-header .mono {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Engineering Profile */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        .about-text p strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Skills/Infrastructure Cards */
+        .infra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .infra-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--grid-color);
+            padding: 2.5rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .infra-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .infra-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+        }
+        
+        .infra-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .infra-card .mono {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .infra-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .infra-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer Links */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            padding: 4rem 0;
+            border-top: 1px solid var(--grid-color);
+            margin-top: 4rem;
+        }
+
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .footer-item .mono {
+            color: var(--accent);
+        }
+        
+        .footer-item a {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom noise overlay for raw aesthetic */
+        .noise {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
     </style>
 </head>
 <body>
+    <div class="noise"></div>
+
     <header>
-        <h1>My Name</h1>
-        <p>Full Stack Developer</p>
+        <div class="logo">Sudhanshu<span>_</span>Singh</div>
+        <div class="nav-links">
+            <a href="https://github.com/sudhanshu1402" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/sudhanshusingh1402" target="_blank">LinkedIn</a>
+            <a href="mailto:sudhanshusingh1402@gmail.com">Contact</a>
+        </div>
     </header>
-    <div class="container">
-        <h2>About Me</h2>
-        <p>I am a passionate developer building cool things.</p>
-        
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2026 My Portfolio</p>
-    </footer>
+
+    <main class="container">
+        <section class="hero reveal">
+            <div class="hero-label mono">Status: Available for Opportunities</div>
+            <h1>Backend & <span>Infrastructure</span> Engineer</h1>
+            <p class="lead">Designing distributed, multi-region backend systems at scale. Navigating the intersection of high-throughput infrastructure and applied AI orchestration.</p>
+        </section>
+
+        <section id="profile" class="reveal">
+            <div class="section-header">
+                <span class="mono">01.</span>
+                <h2>Engineering Profile</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>As a Backend Engineer at <strong>Testlify</strong>, a global SaaS assessment product serving 10K+ requests per minute across three continents, my work spans the full infrastructure stack.</p>
+                    <p>I engineered the multi-region <strong>MongoDB Atlas</strong> deployment enforcing strict data residency across the EU, USA, and KSA. By developing event-driven processing pipelines with <strong>BullMQ</strong> and <strong>Redis</strong>, I successfully cut end-to-end processing times by 40%.</p>
+                    <p>At the API layer, I restructured critical query paths and implemented distributed caching strategies that reduced average response times by 35%, completely overhauling the backend scalability.</p>
+                </div>
+                <div class="about-text">
+                    <p>Where my profile stands apart is at the intersection of backend architecture and <strong>Applied AI</strong>.</p>
+                    <p>I integrated <strong>OpenAI GPT-4</strong>, <strong>Google Gemini</strong>, and <strong>LangChain</strong> into production workflows—powering automated content generation, real-time validation, and multi-language support across 28+ languages.</p>
+                    <p>Additionally, I architected the platform's enterprise authentication layer encompassing <strong>OAuth 2.0, SAML SSO, SCIM</strong>, and RBAC, while building a custom <strong>OpenTelemetry</strong> observability SDK deployed across all internal microservices.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="infrastructure" class="reveal">
+            <div class="section-header">
+                <span class="mono">02.</span>
+                <h2>Core Architecture</h2>
+            </div>
+            
+            <div class="infra-grid">
+                <div class="infra-card">
+                    <span class="mono">SYS.01</span>
+                    <h3>Distributed Systems</h3>
+                    <p>Multi-region routing, MongoDB Atlas Zone Sharding, and Event-Driven Pipelines utilizing BullMQ and Redis for high-throughput async processing.</p>
+                </div>
+                
+                <div class="infra-card">
+                    <span class="mono">SYS.02</span>
+                    <h3>Applied AI & LLMOps</h3>
+                    <p>Production integration of GPT-4 & Gemini via LangChain. Orchestrating multi-model fallback routines and Zod-enforced structured data extraction.</p>
+                </div>
+                
+                <div class="infra-card">
+                    <span class="mono">SYS.03</span>
+                    <h3>Enterprise Auth (SSO)</h3>
+                    <p>Zero-trust architecture implementation featuring JIT Provisioning, SAML SSO, SCIM directory syncing, and rigorous Role-Based Access Control (RBAC).</p>
+                </div>
+
+                <div class="infra-card">
+                    <span class="mono">SYS.04</span>
+                    <h3>Cloud & Observability</h3>
+                    <p>Multi-cloud CI/CD infrastructure spanning AWS, GCP, and Azure. Deep distributed tracing implementation via custom OpenTelemetry Node.js SDKs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="reveal">
+            <div class="section-header">
+                <span class="mono">03.</span>
+                <h2>Current Research</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Outside of enterprise architecture, I am currently developing <strong>Subconscious Robotics</strong>—an autonomous self-training AI framework for robotic agents.</p>
+                    <p>This "subconscious layer" facilitates real-world environment mapping using continuous unsupervised learning. It reflects how I approach engineering: not just solving today's immediate scalability problems, but architecting the foundation for what comes next.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-links reveal">
+            <div class="footer-item">
+                <span class="mono">Email</span>
+                <a href="mailto:sudhanshusingh1402@gmail.com">sudhanshusingh1402@gmail.com</a>
+            </div>
+            <div class="footer-item">
+                <span class="mono">GitHub</span>
+                <a href="https://github.com/sudhanshu1402" target="_blank">github.com/sudhanshu1402</a>
+            </div>
+            <div class="footer-item">
+                <span class="mono">LinkedIn</span>
+                <a href="https://linkedin.com/in/sudhanshusingh1402" target="_blank">/in/sudhanshusingh1402</a>
+            </div>
+            <div class="footer-item">
+                <span class="mono">LeetCode</span>
+                <a href="https://leetcode.com/u/sudhanshu1402/" target="_blank">/u/sudhanshu1402</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Reveal animations on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
 </body>
 </html>

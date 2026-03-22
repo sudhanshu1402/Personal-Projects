@@ -1,63 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Weather Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmospheric Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: sans-serif;
-            background: #8ec5fc;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px;
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
         }
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a2a6c);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Atmospheric glowing orbs behind the glass */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+        .orb-1 {
+            width: 400px; height: 400px;
+            background: rgba(0, 212, 255, 0.4);
+            top: -100px; left: -100px;
+        }
+        .orb-2 {
+            width: 500px; height: 500px;
+            background: rgba(131, 58, 180, 0.4);
+            bottom: -200px; right: -100px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 4rem;
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
             text-align: center;
+            opacity: 0.8;
+        }
+
+        .search-container {
+            position: relative;
         }
 
         input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            color: #fff;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom-color: #fff;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
         }
 
         button {
-            padding: 10px 20px;
-            background: #007bff;
-            color: white;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
             border: none;
-            border-radius: 5px;
+            color: #fff;
             cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
         }
+
+        button:hover {
+            opacity: 1;
+        }
+
+        #result {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #result.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .temp {
+            font-size: 6rem;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .city-name {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .condition {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.7;
+        }
+
     </style>
 </head>
-
 <body>
-    <div class="card">
-        <h1>Weather Dashboard</h1>
-        <input type="text" id="city" placeholder="Enter City">
-        <button onclick="getWeather()">Search</button>
-        <div id="result" style="margin-top: 20px;"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="glass-panel">
+        <h1>Atmosphere</h1>
+        
+        <div class="search-container">
+            <input type="text" id="city" placeholder="Enter coordinates or city...">
+            <button onclick="getWeather()">Scan</button>
+        </div>
+
+        <div id="result">
+            <!-- Injected via JS -->
+        </div>
     </div>
+
     <script>
         async function getWeather() {
             const city = document.getElementById('city').value;
-            // Mock API call
-            const mockData = { temp: 25, condition: 'Sunny' };
-            document.getElementById('result').innerHTML = `
-                <h2>${city}</h2>
-                <p>Temperature: ${mockData.temp}°C</p>
-                <p>Condition: ${mockData.condition}</p>
-            `;
+            const resultDiv = document.getElementById('result');
+            
+            // Reset animation
+            resultDiv.classList.remove('visible');
+            
+            // Artificial delay to simulate scanning radar
+            setTimeout(() => {
+                // Mock API call mapping to realistic UI
+                const mockData = { temp: 24, condition: 'Partly Cloudy' };
+                
+                resultDiv.innerHTML = `
+                    <div class="city-name">${city || 'Unknown Sector'}</div>
+                    <div class="temp">${mockData.temp}°</div>
+                    <div class="condition">${mockData.condition}</div>
+                `;
+                
+                // Trigger reflow and animate in
+                void resultDiv.offsetWidth; 
+                resultDiv.classList.add('visible');
+            }, 600);
         }
     </script>
 </body>
-
 </html>
