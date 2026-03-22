@@ -23,12 +23,23 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+      
+      - name: Isolate Frontend Projects
+        run: |
+          mkdir _gh_pages
+          # Only copy the Javascript projects to preserve the exact URL directory structure
+          cp -r Javascript-Projects _gh_pages/
+          # Optional: Copy the README to serve at the root
+          cp README.md _gh_pages/ || true
+          
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_gh_pages'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
