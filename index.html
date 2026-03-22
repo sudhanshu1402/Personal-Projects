@@ -471,6 +471,50 @@
             color: var(--text-primary);
         }
 
+        /* --- Showcase Section --- */
+        .showcase-section {
+            padding: 4rem 10%;
+            background: rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .showcase-header {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .showcase-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .showcase-badge {
+            background: var(--accent-primary);
+            color: white;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .showcase-card {
+            border: 1px solid var(--accent-primary);
+            background: rgba(255, 255, 255, 0.8) !important;
+        }
+
         /* --- Hero Badge --- */
         .hero-badge {
             position: absolute;
@@ -518,6 +562,7 @@
             <div class="log-line">> RESTORING PASCAL_CASE (JAVA)... OK</div>
             <div class="log-line">> ANALYZING RUST_EXECUTOR... 100%</div>
             <div class="log-line">> SYNCING GLOBAL_DATA... DONE</div>
+            <div class="log-line">> LINKING_ELITE_PRODUCTION_ENGINES... 100%</div>
             <div class="log-line">> ALL SYSTEMS OPTIMAL.</div>
         </div>
     </div>
@@ -538,10 +583,20 @@
             <h1>ENGR.</h1>
         </div>
         <div class="hero-footer">
-            <p class="hero-desc">An elite collection of historical artifacts. 83 projects decoded across 10 programming languages. Performance-driven, architecturally sound.</p>
-            <div class="stat-badge">SYSTEM STATUS: OPTIMAL // ARCHIVE_83</div>
+            <p class="hero-desc">An elite collection of active production engines and historical artifacts. 89 projects decoded across 10 programming languages. Performance-driven, architecturally sound.</p>
+            <div class="stat-badge">SYSTEM STATUS: OPTIMAL // ARCHIVE_89</div>
         </div>
     </header>
+
+    <section class="showcase-section">
+        <div class="showcase-header">
+            <h2 class="showcase-title">PRODUCTION SHOWCASE</h2>
+            <div class="showcase-badge">ACTIVE_SYSTEMS_v2.1</div>
+        </div>
+        <div class="showcase-grid" id="showcase-grid">
+            <!-- Dynamically Injected -->
+        </div>
+    </section>
 
     <main>
         <div class="filters" id="filters">
@@ -568,15 +623,16 @@
         // --- Data Logic ---
         const data = typeof PROJECT_DATA !== 'undefined' ? PROJECT_DATA : [];
         const grid = document.getElementById('grid');
+        const showcaseGrid = document.getElementById('showcase-grid');
         const filtersContainer = document.getElementById('filters');
 
-        function renderCards(projects) {
-            grid.innerHTML = '';
+        function renderCards(projects, targetGrid = grid) {
+            targetGrid.innerHTML = '';
             projects.forEach((proj, index) => {
                 const card = document.createElement('a');
                 card.href = proj.actionUrl;
                 card.target = "_blank";
-                card.className = 'glass project-card';
+                card.className = `glass project-card ${proj.tier === 'showcase' ? 'showcase-card' : ''}`;
                 
                 // Difficulty Color Mapping
                 let diffColor = '#666';
@@ -609,11 +665,16 @@
                     card.style.setProperty('--mouseY', `${y}px`);
                 });
 
-                grid.appendChild(card);
+                targetGrid.appendChild(card);
             });
         }
 
-        renderCards(data);
+        // Split data into Showcase and Archive
+        const showcaseData = data.filter(p => p.tier === 'showcase');
+        const archiveData = data.filter(p => p.tier !== 'showcase');
+
+        renderCards(showcaseData, showcaseGrid);
+        renderCards(archiveData, grid);
 
         // --- Filter Logic ---
         filtersContainer.addEventListener('click', (e) => {
@@ -622,11 +683,13 @@
                 e.target.classList.add('active');
                 const filter = e.target.getAttribute('data-filter');
                 if (filter === 'all') {
-                    renderCards(data);
+                    renderCards(archiveData);
+                } else if (filter === 'ML/AI') {
+                    renderCards(archiveData.filter(p => p.category === 'ML/AI'));
                 } else if (filter === 'Javascript') {
-                    renderCards(data.filter(p => p.category === 'Javascript'));
+                    renderCards(archiveData.filter(p => p.category === 'Javascript'));
                 } else {
-                    renderCards(data.filter(p => p.category === filter));
+                    renderCards(archiveData.filter(p => p.category === filter));
                 }
             }
         });

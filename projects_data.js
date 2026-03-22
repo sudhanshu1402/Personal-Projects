@@ -1,5 +1,71 @@
 const PROJECT_DATA = [
     {
+        name: "Distributed Queue Engine",
+        category: "Systems",
+        type: "Production Engine",
+        tier: "showcase",
+        difficulty: "Expert",
+        isHero: true,
+        actionText: "View System Architecture",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/queue-engine",
+        path: "distributed-queue-engine"
+    },
+    {
+        name: "OpenTelemetry Node SDK",
+        category: "Systems",
+        type: "Production SDK",
+        tier: "showcase",
+        difficulty: "Expert",
+        isHero: true,
+        actionText: "View System Architecture",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/tracing-sdk",
+        path: "otel-sdk-node"
+    },
+    {
+        name: "LLM Assessment Pipeline",
+        category: "ML/AI",
+        type: "Production Pipeline",
+        tier: "showcase",
+        difficulty: "Expert",
+        isHero: true,
+        actionText: "View System Architecture",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/llm-pipeline",
+        path: "llm-assessment-pipeline"
+    },
+    {
+        name: "Enterprise Auth Stack",
+        category: "Systems",
+        type: "Security Engine",
+        tier: "showcase",
+        difficulty: "Expert",
+        isHero: true,
+        actionText: "View System Architecture",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/auth-stack",
+        path: "enterprise-auth-stack"
+    },
+    {
+        name: "Multi-Region Mongo Patterns",
+        category: "Databases",
+        type: "Architectural Pattern",
+        tier: "showcase",
+        difficulty: "Expert",
+        isHero: true,
+        actionText: "View System Architecture",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/mongo-sharding",
+        path: "multi-region-mongo-patterns"
+    },
+    {
+        name: "System Design Portal",
+        category: "Web",
+        type: "Architectural Hub",
+        tier: "showcase",
+        difficulty: "Expert",
+        isHero: true,
+        actionText: "Enter Portal",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/",
+        path: "system-design-portal"
+    },
+    {
         "name": "Subconscious Robotics",
         "category": "ML/AI",
         "isHero": true,
