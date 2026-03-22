@@ -1,8 +1,8 @@
 # THE VAULT: ENGINEERING ARCHIVE
 
-[![CI Status](https://github.com/sudhanshu1402/Personal-Projects/actions/workflows/ci.yml/badge.svg)](https://github.com/sudhanshu1402/Personal-Projects/actions)
+[![CI Status](https://github.com/sudhanshu1402/personal-projects/actions/workflows/ci.yml/badge.svg)](https://github.com/sudhanshu1402/personal-projects/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Portfolio](https://img.shields.io/badge/Live_Archive-Launch-4F46E5?style=for-the-badge)](https://sudhanshu1402.github.io/Personal-Projects/)
+[![Portfolio](https://img.shields.io/badge/Live_Archive-Launch-4F46E5?style=for-the-badge)](https://sudhanshu1402.github.io/personal-projects/)
 
 Welcome to **The Vault**. This repository is a performance-driven archive of 83 historical projects decoded across 10 programming languages. From low-level memory allocators in C++ to distributed systems in Go and complex React ecosystems.
 
@@ -39,7 +39,7 @@ The vault is organized by language and technical complexity, ensuring a clean se
 
 Every backend artifact in this archive is **Replit-ready**. Click the **Launch** badge in the interactive portfolio to spin up an isolated cloud container. Replit automatically provisions the environment and executes the logic directly in your browser.
 
-**[Launch the Interactive Vault ➔](https://sudhanshu1402.github.io/Personal-Projects/)**
+**[Launch the Interactive Vault ➔](https://sudhanshu1402.github.io/personal-projects/)**
 
 ---
 

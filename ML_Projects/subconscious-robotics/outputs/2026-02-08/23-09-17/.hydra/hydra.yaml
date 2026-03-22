@@ -129,18 +129,18 @@ hydra:
   runtime:
     version: 1.3.2
     version_base: '1.3'
-    cwd: /Users/sudhanshusingh/Desktop/Developer/personal/Personal-Projects/subconscious-robotics
+    cwd: /Users/sudhanshusingh/Desktop/Developer/personal/personal-projects/subconscious-robotics
     config_sources:
     - path: hydra.conf
       schema: pkg
       provider: hydra
-    - path: /Users/sudhanshusingh/Desktop/Developer/personal/Personal-Projects/subconscious-robotics/configs
+    - path: /Users/sudhanshusingh/Desktop/Developer/personal/personal-projects/subconscious-robotics/configs
       schema: file
       provider: main
     - path: ''
       schema: structured
       provider: schema
-    output_dir: /Users/sudhanshusingh/Desktop/Developer/personal/Personal-Projects/subconscious-robotics/outputs/2026-02-08/23-09-17
+    output_dir: /Users/sudhanshusingh/Desktop/Developer/personal/personal-projects/subconscious-robotics/outputs/2026-02-08/23-09-17
     choices:
       hydra/env: default
       hydra/callbacks: null

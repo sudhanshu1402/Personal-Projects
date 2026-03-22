@@ -1,6 +1,6 @@
 #!/bin/bash
 # Universal Vercel Mass-Deployment Script
-# Scans the Personal-Projects archive for static web apps and deploys them instantly
+# Scans the personal-projects archive for static web apps and deploys them instantly
 
 echo "🚀 Booting up the Universal Vercel Deployer..."
 echo "Ensure you are logged in to Vercel (run 'npx vercel login' first)."

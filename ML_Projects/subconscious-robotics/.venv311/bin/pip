@@ -1,4 +1,4 @@
-#!/Users/sudhanshusingh/Desktop/Developer/personal/Personal-Projects/subconscious-robotics/.venv311/bin/python3.11
+#!/Users/sudhanshusingh/Desktop/Developer/personal/personal-projects/subconscious-robotics/.venv311/bin/python3.11
 import sys
 from pip._internal.cli.main import main
 if __name__ == '__main__':

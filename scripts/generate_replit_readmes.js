@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const REPO_ROOT = path.join(__dirname, '..');
-const GITHUB_REPO_URL = "https://github.com/sudhanshu1402/Personal-Projects";
-const REPLIT_BASE_URL = "https://replit.com/github/sudhanshu1402/Personal-Projects";
+const GITHUB_REPO_URL = "https://github.com/sudhanshu1402/personal-projects";
+const REPLIT_BASE_URL = "https://replit.com/github/sudhanshu1402/personal-projects";
 
 const TARGET_DIRS = [
     'Python-Projects', 'Java-Projects', 'C-Projects', 'Cpp-Projects', 
@@ -20,7 +20,7 @@ function generateMarkdownTable(projects, categoryName) {
     for (const proj of projects) {
         const relativePath = path.relative(REPO_ROOT, proj.dir);
         const sourceUrl = `${GITHUB_REPO_URL}/tree/main/${relativePath.replace(/\\/g, '/')}`;
-        const badgeUrl = `https://replit.com/badge/github/sudhanshu1402/Personal-Projects`;
+        const badgeUrl = `https://replit.com/badge/github/sudhanshu1402/personal-projects`;
         
         md += `| **${proj.name}** | [📂 View Source](${sourceUrl}) | [![Run on Repl.it](${badgeUrl})](${REPLIT_BASE_URL}) |\n`;
     }

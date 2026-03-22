@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const REPO_ROOT = path.join(__dirname, '..');
-const GITHUB_PAGES_BASE = "https://sudhanshu1402.github.io/Personal-Projects";
+const GITHUB_PAGES_BASE = "https://sudhanshu1402.github.io/personal-projects";
 
 function generatePagesTable(projects) {
     if (projects.length === 0) return '';
@@ -13,7 +13,7 @@ function generatePagesTable(projects) {
     
     for (const proj of projects) {
         const relativeDir = path.relative(REPO_ROOT, path.dirname(proj.file));
-        const sourceUrl = `https://github.com/sudhanshu1402/Personal-Projects/tree/main/${relativeDir.replace(/\\/g, '/')}`;
+        const sourceUrl = `https://github.com/sudhanshu1402/personal-projects/tree/main/${relativeDir.replace(/\\/g, '/')}`;
         const liveUrl = `${GITHUB_PAGES_BASE}/${relativeDir.replace(/\\/g, '/')}/index.html`;
         
         md += `| **${proj.name}** | [📂 View Source](${sourceUrl}) | [🌐 View Live on GitHub Pages](${liveUrl}) |\n`;

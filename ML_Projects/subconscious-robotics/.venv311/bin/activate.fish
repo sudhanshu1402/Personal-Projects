@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /Users/sudhanshusingh/Desktop/Developer/personal/Personal-Projects/subconscious-robotics/.venv311
+set -gx VIRTUAL_ENV /Users/sudhanshusingh/Desktop/Developer/personal/personal-projects/subconscious-robotics/.venv311
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

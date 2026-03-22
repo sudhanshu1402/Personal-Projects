@@ -43,7 +43,7 @@ function scanDirectory(dir, category) {
             actionUrl = relativePath + '/index.html';
             actionText = 'Launch Interface';
         } else {
-            actionUrl = `https://replit.com/github/sudhanshu1402/Personal-Projects?folder=${encodeURIComponent(relativePath)}`;
+            actionUrl = `https://replit.com/github/sudhanshu1402/personal-projects?folder=${encodeURIComponent(relativePath)}`;
             actionText = 'Execute in Replit';
         }
 
