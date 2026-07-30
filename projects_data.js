@@ -2,7 +2,7 @@ const PROJECT_DATA = [
     {
         name: "Distributed Queue Engine",
         category: "Systems",
-        type: "Production Engine",
+        type: "Job Queue Engine",
         tier: "showcase",
         difficulty: "Expert",
         isHero: true,
@@ -13,8 +13,8 @@ const PROJECT_DATA = [
     {
         name: "OpenTelemetry Node SDK",
         category: "Systems",
-        type: "Production SDK",
-        tier: "showcase",
+        type: "OpenTelemetry Wrapper",
+        tier: "secondary",
         difficulty: "Expert",
         isHero: true,
         actionText: "View System Architecture",
@@ -24,7 +24,7 @@ const PROJECT_DATA = [
     {
         name: "LLM Assessment Pipeline",
         category: "ML/AI",
-        type: "Production Pipeline",
+        type: "LLM Pipeline",
         tier: "showcase",
         difficulty: "Expert",
         isHero: true,
@@ -35,7 +35,7 @@ const PROJECT_DATA = [
     {
         name: "Enterprise Auth Stack",
         category: "Systems",
-        type: "Security Engine",
+        type: "SSO / SCIM Gateway",
         tier: "showcase",
         difficulty: "Expert",
         isHero: true,
@@ -46,8 +46,8 @@ const PROJECT_DATA = [
     {
         name: "Multi-Region Mongo Patterns",
         category: "Databases",
-        type: "Architectural Pattern",
-        tier: "showcase",
+        type: "Sharding Patterns",
+        tier: "secondary",
         difficulty: "Expert",
         isHero: true,
         actionText: "View System Architecture",
