@@ -68,7 +68,9 @@ Each language folder has its own README with the full per-tier list.
 
 ## The portfolio site
 
-`index.html` is a self-contained single-page site (neumorphic "soft UI" styling, custom cursor on mouse pointers). It reads its content from `projects_data.js`: 8 hand-picked showcase entries that link out to system-design write-ups, plus 84 archive entries. That is 92 of the 100 project folders in the repo, so it does not auto-list everything here.
+`index.html` is a self-contained single-page site (neumorphic "soft UI" styling, custom cursor on mouse pointers). It reads its content from `projects_data.js`: 6 hand-picked showcase entries that link out to system-design write-ups, plus 86 archive entries, grouped into 13 filter chips. 84 of the 92 entries point at a folder in this repo; the other 8 link out to the standalone showcase repos. The repo tracks 208 project folders in total, so the site does not auto-list everything here.
+
+The hero counts and the filter chips are derived from `projects_data.js` at load time, and `scripts/check-vault.mjs` fails CI if a hardcoded count or chip comes back.
 
 To view it locally, open `index.html` in a browser, or serve the directory:
 
@@ -104,8 +106,8 @@ cd rust/expert/async-executor && cargo run
 # Python
 cd python/medium/2048 && python3 main.py
 
-# Node
-cd nodejs && npm install && npm start
+# Node — deps are shared across the nodejs/ projects, each one is a single file
+cd nodejs && npm install && node medium/url-shortener/index.js
 ```
 
 ## Scope, honestly

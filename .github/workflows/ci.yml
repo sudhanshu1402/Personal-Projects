@@ -29,6 +29,10 @@ jobs:
           | xargs -0 -n1 node --check
         node --check projects_data.js
 
+    - name: Check the vault page against the data
+      if: matrix.language == 'javascript'
+      run: node scripts/check-vault.mjs
+
     - name: Set up Go
       if: matrix.language == 'go'
       uses: actions/setup-go@v4

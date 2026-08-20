@@ -24,8 +24,8 @@
             --accent-primary: #3b82f6; /* Tactical Blue */
             --accent-glow: rgba(59, 130, 246, 0.4);
             --text-primary: #2d3436;
-            --text-secondary: #636e72;
-            --text-muted: #b2bec3;
+            --text-secondary: #4e5457;
+            --text-muted: #5b6568;
             --border: rgba(255, 255, 255, 0.3);
             --glass: rgba(255, 255, 255, 0.4);
 
@@ -553,8 +553,8 @@
     <header class="hero">
         <h1>VAULT ENGR.</h1>
         <div class="hero-footer">
-            <p class="hero-desc">A collection of active production engines and historical artifacts. 89 projects decoded across 10 programming languages. Performance-driven, architecturally sound.</p>
-            <div class="stat-badge">SYSTEM STATUS: OPTIMAL // ARCHIVE_89</div>
+            <p class="hero-desc">A collection of active production engines and historical artifacts. <span id="hero-count"></span> projects decoded across <span id="hero-stacks"></span> stacks. Performance-driven, architecturally sound.</p>
+            <div class="stat-badge">SYSTEM STATUS: OPTIMAL // ARCHIVE_<span id="hero-badge"></span></div>
         </div>
     </header>
 
@@ -569,18 +569,7 @@
     </section>
 
     <main>
-        <div class="filters" id="filters">
-            <button class="filter-btn active" data-filter="all">ALL DEPLOYMENTS</button>
-            <button class="filter-btn" data-filter="ML/AI">ML / AI</button>
-            <button class="filter-btn" data-filter="Python">PYTHON</button>
-            <button class="filter-btn" data-filter="Java">JAVA</button>
-            <button class="filter-btn" data-filter="Go">GO-LANG</button>
-            <button class="filter-btn" data-filter="Rust">RUST</button>
-            <button class="filter-btn" data-filter="Cpp">C++</button>
-            <button class="filter-btn" data-filter="Nodejs">NODE.JS</button>
-            <button class="filter-btn" data-filter="Javascript">JAVASCRIPT</button>
-            <button class="filter-btn" data-filter="Typescript">TYPESCRIPT</button>
-        </div>
+        <div class="filters" id="filters"></div>
 
         <div class="vault-grid" id="grid">
             <!-- Dynamically Injected -->
@@ -649,6 +638,27 @@
         const showcaseData = data.filter(p => p.tier === 'showcase');
         const archiveData = data.filter(p => p.tier !== 'showcase');
 
+        const CHIP_LABELS = { 'ML/AI': 'ML / AI', Go: 'GO-LANG', Cpp: 'C++', CSharp: 'C#', Nodejs: 'NODE.JS' };
+        const categories = [...new Set(archiveData.map(p => p.category))].sort();
+
+        // Chips come from the data, so a new category can never be unreachable by filter.
+        function renderFilters() {
+            filtersContainer.innerHTML = '';
+            [['all', 'ALL DEPLOYMENTS'], ...categories.map(c => [c, CHIP_LABELS[c] || c.toUpperCase()])]
+                .forEach(([value, label], i) => {
+                    const btn = document.createElement('button');
+                    btn.className = i === 0 ? 'filter-btn active' : 'filter-btn';
+                    btn.dataset.filter = value;
+                    btn.textContent = label;
+                    filtersContainer.appendChild(btn);
+                });
+        }
+
+        document.getElementById('hero-count').textContent = archiveData.length;
+        document.getElementById('hero-badge').textContent = archiveData.length;
+        document.getElementById('hero-stacks').textContent = categories.length;
+
+        renderFilters();
         renderCards(showcaseData, showcaseGrid);
         renderCards(archiveData, grid);
 
