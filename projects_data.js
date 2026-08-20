@@ -1,5 +1,27 @@
 const PROJECT_DATA = [
     {
+        name: "keel",
+        category: "Systems",
+        type: "Durable Execution Engine",
+        tier: "showcase",
+        difficulty: "Expert",
+        isHero: true,
+        actionText: "View Source Code",
+        actionUrl: "https://github.com/sudhanshu1402/keel",
+        path: "keel"
+    },
+    {
+        name: "nocap",
+        category: "Systems",
+        type: "Terminal Agent UI",
+        tier: "showcase",
+        difficulty: "Expert",
+        isHero: true,
+        actionText: "View Source Code",
+        actionUrl: "https://github.com/sudhanshu1402/nocap",
+        path: "nocap"
+    },
+    {
         name: "Distributed Queue Engine",
         category: "Systems",
         type: "Job Queue Engine",
@@ -7,7 +29,7 @@ const PROJECT_DATA = [
         difficulty: "Expert",
         isHero: true,
         actionText: "View System Architecture",
-        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/queue-engine",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/queue-engine/",
         path: "distributed-queue-engine"
     },
     {
@@ -18,7 +40,7 @@ const PROJECT_DATA = [
         difficulty: "Expert",
         isHero: true,
         actionText: "View System Architecture",
-        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/tracing-sdk",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/tracing-sdk/",
         path: "otel-sdk-node"
     },
     {
@@ -29,7 +51,7 @@ const PROJECT_DATA = [
         difficulty: "Expert",
         isHero: true,
         actionText: "View System Architecture",
-        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/llm-pipeline",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/llm-pipeline/",
         path: "llm-assessment-pipeline"
     },
     {
@@ -40,7 +62,7 @@ const PROJECT_DATA = [
         difficulty: "Expert",
         isHero: true,
         actionText: "View System Architecture",
-        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/auth-stack",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/auth-stack/",
         path: "enterprise-auth-stack"
     },
     {
@@ -51,7 +73,7 @@ const PROJECT_DATA = [
         difficulty: "Expert",
         isHero: true,
         actionText: "View System Architecture",
-        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/mongo-sharding",
+        actionUrl: "https://sudhanshu1402.github.io/system-design-portal/mongo-sharding/",
         path: "multi-region-mongo-patterns"
     },
     {
@@ -767,7 +789,7 @@ const PROJECT_DATA = [
         "difficulty": "Easy",
         "type": "Frontend UI",
         "path": "javascript/easy/personal-portfolio",
-        "actionUrl": "https://sudhanshu1402.github.io/personal-projects/javascript/easy/personal-portfolio/index.html",
+        "actionUrl": "https://sudhanshu1402.github.io/engineering-projects/javascript/easy/personal-portfolio/index.html",
         "actionText": "Open Live Preview"
     },
     {
@@ -776,7 +798,7 @@ const PROJECT_DATA = [
         "difficulty": "Easy",
         "type": "Frontend UI",
         "path": "javascript/easy/quiz-page",
-        "actionUrl": "https://sudhanshu1402.github.io/personal-projects/javascript/easy/quiz-page/index.html",
+        "actionUrl": "https://sudhanshu1402.github.io/engineering-projects/javascript/easy/quiz-page/index.html",
         "actionText": "Open Live Preview"
     },
     {
@@ -786,7 +808,7 @@ const PROJECT_DATA = [
         "difficulty": "Expert",
         "type": "Frontend UI",
         "path": "javascript/expert/kanban-board",
-        "actionUrl": "https://sudhanshu1402.github.io/personal-projects/javascript/expert/kanban-board/index.html",
+        "actionUrl": "https://sudhanshu1402.github.io/engineering-projects/javascript/expert/kanban-board/index.html",
         "actionText": "Open Live Preview"
     },
     {
@@ -795,7 +817,7 @@ const PROJECT_DATA = [
         "difficulty": "Hard",
         "type": "Frontend UI",
         "path": "javascript/hard/furnicto",
-        "actionUrl": "https://sudhanshu1402.github.io/personal-projects/javascript/hard/furnicto/index.html",
+        "actionUrl": "https://sudhanshu1402.github.io/engineering-projects/javascript/hard/furnicto/index.html",
         "actionText": "Open Live Preview"
     },
     {
@@ -804,7 +826,7 @@ const PROJECT_DATA = [
         "difficulty": "Hard",
         "type": "Frontend UI",
         "path": "javascript/hard/weather-dashboard",
-        "actionUrl": "https://sudhanshu1402.github.io/personal-projects/javascript/hard/weather-dashboard/index.html",
+        "actionUrl": "https://sudhanshu1402.github.io/engineering-projects/javascript/hard/weather-dashboard/index.html",
         "actionText": "Open Live Preview"
     },
     {
@@ -822,7 +844,7 @@ const PROJECT_DATA = [
         "difficulty": "Medium",
         "type": "Frontend UI",
         "path": "javascript/medium/task-manager",
-        "actionUrl": "https://sudhanshu1402.github.io/personal-projects/javascript/medium/task-manager/index.html",
+        "actionUrl": "https://sudhanshu1402.github.io/engineering-projects/javascript/medium/task-manager/index.html",
         "actionText": "Open Live Preview"
     }
 ];

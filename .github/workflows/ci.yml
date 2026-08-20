@@ -22,12 +22,12 @@ jobs:
       with:
         node-version: '18'
         
-    - name: Install Node Dependencies
+    - name: Syntax-check JS Projects
       if: matrix.language == 'javascript'
       run: |
-        cd javascript
-        # Add basic install/test logic here if valid package.json exists
-        echo "Validating JS Projects..."
+        find javascript nodejs -name '*.js' -not -path '*/node_modules/*' -print0 \
+          | xargs -0 -n1 node --check
+        node --check projects_data.js
 
     - name: Set up Go
       if: matrix.language == 'go'

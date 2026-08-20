@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE VAULT | Sudhanshu Singh</title>
+    <meta name="description" content="An archive of 100 engineering projects across 11 languages - C, C++, C#, Go, Java, JavaScript, Node.js, PHP, Python, Rust, and TypeScript.">
+    <link rel="canonical" href="https://sudhanshu1402.github.io/engineering-projects/">
+    <meta property="og:title" content="THE VAULT | Sudhanshu Singh">
+    <meta property="og:description" content="An archive of 100 engineering projects across 11 languages.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sudhanshu1402.github.io/engineering-projects/">
     <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="projects_data.js?v=vault-v2.1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: false, theme: 'dark' });
-    </script>
     <style>
         :root {
             /* --- Tactical Design Tokens --- */
@@ -40,7 +42,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: none;
+        }
+
+        /* The replacement cursor only exists on a mouse; touch and keyboard users
+           kept a hidden system cursor for nothing. */
+        @media (pointer: fine) {
+            * { cursor: none; }
         }
 
         body {
@@ -63,7 +70,8 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: url("https://grainy-gradients.vercel.app/noise.svg");
+            /* inlined: the old grainy-gradients.vercel.app/noise.svg now 404s */
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
             opacity: 0.05;
             mix-blend-mode: soft-light;
             z-index: 9999;
@@ -71,6 +79,10 @@
         }
 
         /* --- Custom Cursor --- */
+        #cursor-dot, #cursor-outline { display: none; }
+        @media (pointer: fine) {
+            #cursor-dot, #cursor-outline { display: block; }
+        }
         #cursor-dot {
             width: 6px;
             height: 6px;
@@ -499,10 +511,6 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .mermaid {
-            background: transparent !important;
-        }
-
         /* --- Scrollbar --- */
         .detail-container::-webkit-scrollbar {
             width: 6px;
@@ -519,31 +527,6 @@
     </style>
 </head>
 <body>
-
-    <!-- --- System Detail Overlay --- -->
-    <div id="detail-overlay" class="overlay">
-        <div class="detail-container glass">
-            <button id="close-detail" class="close-btn">&times;</button>
-            <div class="detail-content">
-                <header class="detail-header">
-                    <h2 id="detail-title">SYSTEM_NAME</h2>
-                    <div id="detail-tags" class="tag-row"></div>
-                </header>
-                <div class="detail-grid">
-                    <div class="detail-info">
-                        <h3>ARCHITECTURAL_MISSION</h3>
-                        <p id="detail-description"></p>
-                        <h3>TECHNICAL_CHALLENGES</h3>
-                        <ul id="detail-challenges"></ul>
-                    </div>
-                    <div class="detail-visual">
-                        <h3>ARCHITECTURE_FLOW</h3>
-                        <div id="detail-diagram" class="mermaid"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- --- Existing Cursor Elements --- -->
 
@@ -607,6 +590,12 @@
     <script>
         // --- Data Logic ---
         const data = typeof PROJECT_DATA !== 'undefined' ? PROJECT_DATA : [];
+
+        function escapeHtml(v) {
+            return String(v == null ? '' : v).replace(/[&<>"']/g, function (ch) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+            });
+        }
         const grid = document.getElementById('grid');
         const showcaseGrid = document.getElementById('showcase-grid');
         const filtersContainer = document.getElementById('filters');
@@ -628,17 +617,17 @@
                     ${proj.isHero ? '<div class="hero-badge">FEATURED</div>' : ''}
                     <div class="card-top">
                         <span class="project-id">ID_${(index + 1).toString().padStart(3, '0')}</span>
-                        <span class="difficulty-tag" style="border-color: ${diffColor}; color: ${diffColor}">${proj.difficulty}</span>
+                        <span class="difficulty-tag" style="border-color: ${diffColor}; color: ${diffColor}">${escapeHtml(proj.difficulty)}</span>
                     </div>
                     <div>
-                        <h2 class="project-name">${proj.name}</h2>
+                        <h2 class="project-name">${escapeHtml(proj.name)}</h2>
                         <span class="project-category">
                             ${proj.tier === 'showcase' ? '<span class="status-led"></span>' : ''}
-                            ${proj.category} - ${proj.type}
+                            ${escapeHtml(proj.category)} - ${escapeHtml(proj.type)}
                         </span>
                     </div>
                     <div class="card-footer">
-                        <span class="launch-link">${proj.actionText}</span>
+                        <span class="launch-link">${escapeHtml(proj.actionText)}</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </div>
                 `;
@@ -669,15 +658,9 @@
                 document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
                 e.target.classList.add('active');
                 const filter = e.target.getAttribute('data-filter');
-                if (filter === 'all') {
-                    renderCards(archiveData);
-                } else if (filter === 'ML/AI') {
-                    renderCards(archiveData.filter(p => p.category === 'ML/AI'));
-                } else if (filter === 'Javascript') {
-                    renderCards(archiveData.filter(p => p.category === 'Javascript'));
-                } else {
-                    renderCards(archiveData.filter(p => p.category === filter));
-                }
+                renderCards(filter === 'all'
+                    ? archiveData
+                    : archiveData.filter(p => p.category === filter));
             }
         });
 
@@ -685,12 +668,20 @@
         const dot = document.getElementById('cursor-dot');
         const outline = document.getElementById('cursor-outline');
 
+        const calmCursor = window.matchMedia('(prefers-reduced-motion: reduce)');
+
         window.addEventListener('mousemove', (e) => {
             const posX = e.clientX;
             const posY = e.clientY;
 
             dot.style.left = `${posX}px`;
             dot.style.top = `${posY}px`;
+
+            if (calmCursor.matches) {
+                outline.style.left = `${posX - 20}px`;
+                outline.style.top = `${posY - 20}px`;
+                return;
+            }
 
             outline.animate({
                 left: `${posX - 20}px`,

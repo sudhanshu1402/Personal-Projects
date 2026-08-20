@@ -7,7 +7,7 @@
   <br>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
-  [![Projects](https://img.shields.io/badge/Projects-~100-success?style=flat-square)](#whats-in-here)
+  [![Projects](https://img.shields.io/badge/Projects-100-success?style=flat-square)](#whats-in-here)
   [![Languages](https://img.shields.io/badge/Languages-11-3b82f6?style=flat-square)](#projects-by-language)
 
   ### [Open the portfolio site](https://sudhanshu1402.github.io)
@@ -68,7 +68,7 @@ Each language folder has its own README with the full per-tier list.
 
 ## The portfolio site
 
-`index.html` is a self-contained single-page site (neumorphic "soft UI" styling, custom cursor, Mermaid diagrams). It reads its content from `projects_data.js`, which currently defines a small set of hand-picked showcase entries — larger system-design pieces that link out to detailed write-ups. It does not auto-list every folder in the repo.
+`index.html` is a self-contained single-page site (neumorphic "soft UI" styling, custom cursor on mouse pointers). It reads its content from `projects_data.js`: 8 hand-picked showcase entries that link out to system-design write-ups, plus 84 archive entries. That is 92 of the 100 project folders in the repo, so it does not auto-list everything here.
 
 To view it locally, open `index.html` in a browser, or serve the directory:
 
@@ -81,11 +81,12 @@ The live version is at [sudhanshu1402.github.io](https://sudhanshu1402.github.io
 
 ## Automation
 
-`.github/workflows/` holds three GitHub Actions:
+`.github/workflows/` holds two GitHub Actions:
 
 - **pages.yml** — deploys the static site to GitHub Pages.
-- **promote.yml** — on changes to `index.html` or `projects_data.js`, mirrors the UI files to the `sudhanshu1402.github.io` repo.
-- **ci.yml** — builds the Go `load-balancer` and runs a placeholder JS validation step on push.
+- **ci.yml** — builds the Go `load-balancer` and syntax-checks every tracked `.js` under `javascript/` and `nodejs/` with `node --check` on push.
+
+`index.html` and `projects_data.js` also exist in the `sudhanshu1402.github.io` repo. Nothing syncs them, so a change to either one has to be copied across by hand.
 
 The `scripts/` folder has Node/shell helpers used to regenerate per-folder READMEs and rebuild `projects_data.js`.
 
