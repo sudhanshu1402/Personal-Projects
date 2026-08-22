@@ -23,18 +23,20 @@ Two folders (`ejs-express-auth`, `loop-back4-inventory`) are placeholders with a
 
 ## Running a project
 
-Dependencies are declared in the single `package.json` at the repo root (`express`, `multer`, `body-parser`, `cors`). Install once, then run the project you want:
+There is no shared `package.json`. Each project is a single file, so install what it imports and run it:
 
 ```bash
-npm install
+npm install express
 node easy/timestamp-api/index.js
 ```
 
-Every app listens on port 3000. `npm start` runs `node index.js` from the current directory, so `cd` into a project first if you use it. Each project also carries a `.replit` file (`npm install && npm start`) for running on Replit.
+Across the tiers the imports are `express`, `multer`, `body-parser`, `cors` and `socket.io`. Each project's own README lists the ones it needs.
+
+Every app listens on port 3000. Each project also carries a `.replit` file (`npm install && npm start`) for running on Replit; that path expects a manifest and no longer has one.
 
 Two things to know before running everything:
 
-- **real-time-chat** imports `socket.io`, which is not in the root `package.json`. Run `npm install socket.io` first.
+- **real-time-chat** imports `socket.io` as well as `express`. Run `npm install express socket.io` first.
 - **video-streaming-server** reads a file called `sample.mp4` from its working directory. Drop one in before hitting `/video`.
 
 ## Example — timestamp-api

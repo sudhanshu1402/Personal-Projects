@@ -43,16 +43,15 @@ typescript/
 - **Target/module:** ES2016 / CommonJS
 - **Frameworks used across the tiers:** Express, React 18, NestJS 10, Next.js 13, Apollo Gateway / Apollo Server
 
-Dependencies and the compiler config are shared from the root `package.json` and `tsconfig.json`.
+The compiler config is shared from `tsconfig.json` in this directory. There is no `package.json`; the framework packages each exercise imports are not installed for you.
 
 ## Build & run
 
-Install once from this directory, then compile:
-
 ```bash
-npm install
-npm run build   # runs tsc
+npx tsc          # compiles against tsconfig.json
 ```
+
+Type errors on the framework imports are expected until you install the packages that exercise uses.
 
 Run an individual exercise with a TypeScript runner, for example:
 
