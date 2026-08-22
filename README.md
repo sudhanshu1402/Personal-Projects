@@ -106,8 +106,8 @@ cd rust/expert/async-executor && cargo run
 # Python
 cd python/medium/2048 && python3 main.py
 
-# Node — deps are shared across the nodejs/ projects, each one is a single file
-cd nodejs && npm install && node medium/url-shortener/index.js
+# Node — each project is a single file, install only what it imports
+cd nodejs/medium/url-shortener && npm install express body-parser && node index.js
 ```
 
 ## Scope, honestly
