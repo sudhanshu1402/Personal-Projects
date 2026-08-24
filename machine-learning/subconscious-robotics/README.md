@@ -21,7 +21,7 @@ The parts that actually run:
 
 From `pyproject.toml` / `requirements.txt`:
 
-- Python 3.10+
+- Python 3.11+
 - PyBullet (physics)
 - Gymnasium (env interface)
 - Stable Baselines3 (PPO / SAC)
