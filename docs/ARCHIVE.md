@@ -49,9 +49,11 @@ python3 -m http.server 8000
 
 `scripts/` also holds the README generators (`generate-pages-readmes.js`,
 `generate-replit-readmes.js`), `make-production-ready.js`, and `deploy-frontends.sh`.
-`scripts/build-directory-data.js` is stale: it looks for `Python-Projects`-style folder names
-that no longer exist, so running it would overwrite `projects_data.js` with an empty array.
-Do not run it until its `TARGET_DIRS` list is fixed.
+
+`projects_data.js` drives the site's project grid and is hand-curated: it carries `tier`,
+`isHero` and per-project copy that no folder scan can produce. The old
+`scripts/build-directory-data.js` generator was deleted for that reason, it scanned for
+`Python-Projects`-style folders that no longer exist and would have emptied the file.
 
 ## Running individual projects
 
