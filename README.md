@@ -4,116 +4,63 @@
 
   <img src="https://readme-typing-svg.demolab.com?font=Syne&weight=800&size=34&duration=3000&pause=1000&color=2D3436&center=true&vCenter=true&width=1000&height=90&lines=ENGINEERING+PROJECTS;100+builds+across+11+languages" alt="Engineering Projects" />
 
-  <br>
-
   [![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
-  [![Projects](https://img.shields.io/badge/Projects-100-success?style=flat-square)](#whats-in-here)
-  [![Languages](https://img.shields.io/badge/Languages-11-3b82f6?style=flat-square)](#projects-by-language)
+  [![Projects](https://img.shields.io/badge/Projects-109-success?style=flat-square)](#jump-to-a-folder)
+  [![Languages](https://img.shields.io/badge/Languages-11-3b82f6?style=flat-square)](#jump-to-a-folder)
 
   ### [Open the portfolio site](https://sudhanshu1402.github.io)
 
 </div>
 
----
+![Archive at a glance, four tiles: 109 project folders, 100 in language folders and 9 in topic folders; 11 language folders, 4 tiers each, easy to expert; 1,011 project files, 142 of them READMEs; 92 portfolio entries, 13 chips, 84 pointing back into this repo](https://raw.githubusercontent.com/sudhanshu1402/engineering-projects/main/assets/glance.svg)
 
-A personal archive of coding projects, sorted by language and difficulty. Most are small-to-medium learning builds — some are larger, more involved pieces. The repo also carries a single-page portfolio site (`index.html`) that gets deployed to GitHub Pages.
+A personal archive of coding projects, sorted by language and difficulty tier. Also carries a
+single-page portfolio site (`index.html`) deployed to GitHub Pages.
 
-## What's in here
+## What is in here
 
-Two things live side by side:
+![Inventory: 100 projects in 11 language folders, python 16, cpp 10, c and csharp 9, the rest 8 each; topic folders machine-learning-basics 4, android 2, dbms 2, machine-learning 1; commonest files .cpp 77, .py 47, .java 37](https://raw.githubusercontent.com/sudhanshu1402/engineering-projects/main/assets/inventory.svg)
 
-1. **The project folders** — around 100 standalone projects grouped by language, each split into `easy` / `medium` / `hard` / `expert` tiers. Plus a few topic folders (DSA, DBMS, machine learning, Android).
-2. **The portfolio site** — `index.html` + `projects_data.js`, a neumorphic single-page site that showcases a hand-picked set of larger builds and links out to their write-ups.
+Each language folder splits into `easy`, `medium`, `hard`, `expert`, with its own per-tier README.
 
-## Projects by language
+## Jump to a folder
 
-Each language folder holds four difficulty tiers (`easy`, `medium`, `hard`, `expert`).
-
-| Folder | Projects |
-| :--- | :--- |
-| [python](./python) | 16 |
-| [cpp](./cpp) | 10 |
-| [c](./c) | 9 |
-| [csharp](./csharp) | 9 |
-| [go](./go) | 8 |
-| [java](./java) | 8 |
-| [javascript](./javascript) | 8 |
-| [nodejs](./nodejs) | 8 |
-| [php](./php) | 8 |
-| [rust](./rust) | 8 |
-| [typescript](./typescript) | 8 |
-
-## Other folders
-
-| Folder | Contents |
-| :--- | :--- |
-| [dsa](./dsa) | Data-structure & algorithm practice, grouped by topic (array, strings, linked-list, stack, sorting, searching, fundamentals) |
-| [dbms](./dbms) | Two database projects: hospital-management-system, online-movie-booking-system |
-| [machine-learning](./machine-learning) | Larger ML work (subconscious-robotics) |
-| [machine-learning-basics](./machine-learning-basics) | Four intro ML notebooks/scripts: cartoonify-image, fake-news-detection, housing-prices-prediction, price-elasticity-of-demand-analysis |
-| [android](./android) | photo-manager, scientific-calculator |
-| [learning-practice](./learning-practice) | Scratch space (README only for now) |
+| Folder | Projects | Folder | Holds |
+| :--- | ---: | :--- | :--- |
+| [python](./python) | 16 | [dsa](./dsa) | 67 data structures and algorithms solutions, 7 topics |
+| [cpp](./cpp) | 10 | [machine-learning-basics](./machine-learning-basics) | 4 intro machine learning builds |
+| [c](./c) | 9 | [android](./android) | photo-manager, scientific-calculator |
+| [csharp](./csharp) | 9 | [dbms](./dbms) | hospital-management-system, online-movie-booking-system |
+| [go](./go) | 8 | [machine-learning](./machine-learning) | subconscious-robotics |
+| [java](./java) | 8 | [learning-practice](./learning-practice) | scratch space |
+| [javascript](./javascript) | 8 | | |
+| [nodejs](./nodejs) | 8 | | |
+| [php](./php) | 8 | | |
+| [rust](./rust) | 8 | | |
+| [typescript](./typescript) | 8 | | |
 
 ## A few of the bigger builds
 
 | Project | Language | What it is |
 | :--- | :--- | :--- |
-| [load-balancer](./go/hard/load-balancer) | Go | Round-robin L7 load balancer with health-check polling |
-| [async-executor](./rust/expert/async-executor) | Rust | Custom future executor with Waker-based scheduling |
-| [kanban-board](./javascript/expert/kanban-board) | JavaScript | Drag-and-drop board with local persistence |
+| [load-balancer](./go/hard/load-balancer) | Go | Round-robin L7 load balancer, health-check polling |
+| [async-executor](./rust/expert/async-executor) | Rust | Future executor, Waker-based scheduling |
+| [kanban-board](./javascript/expert/kanban-board) | JavaScript | Drag-and-drop board, local persistence |
 | [photo-manager](./java/hard/photo-manager) | Java | Android photo app on SQLite |
-| [subconscious-robotics](./machine-learning/subconscious-robotics) | Python | Self-training framework with Hydra configs |
+| [subconscious-robotics](./machine-learning/subconscious-robotics) | Python | Self-training framework, Hydra configs |
 
-Each language folder has its own README with the full per-tier list.
-
-## The portfolio site
-
-`index.html` is a self-contained single-page site (neumorphic "soft UI" styling, custom cursor on mouse pointers). It reads its content from `projects_data.js`: 6 hand-picked showcase entries that link out to system-design write-ups, plus 86 archive entries, grouped into 13 filter chips. 84 of the 92 entries point at a folder in this repo; the other 8 link out to the standalone showcase repos. The repo tracks 208 project folders in total, so the site does not auto-list everything here.
-
-The hero counts and the filter chips are derived from `projects_data.js` at load time, and `scripts/check-vault.mjs` fails CI if a hardcoded count or chip comes back.
-
-To view it locally, open `index.html` in a browser, or serve the directory:
+## Runnable checks
 
 ```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
+node scripts/make-readme-svg.mjs   # redraw both images above
+node scripts/check-vault.mjs       # portfolio page still matches projects_data.js
 ```
 
-The live version is at [sudhanshu1402.github.io](https://sudhanshu1402.github.io).
+The images are counted from `git ls-files` and `projects_data.js`. The generator throws rather
+than draw a blank frame, and CI fails on drift.
 
-## Automation
-
-`.github/workflows/` holds two GitHub Actions:
-
-- **pages.yml** — deploys the static site to GitHub Pages.
-- **ci.yml** — builds the Go `load-balancer` and syntax-checks every tracked `.js` under `javascript/` and `nodejs/` with `node --check` on push.
-
-`index.html` and `projects_data.js` also exist in the `sudhanshu1402.github.io` repo. Nothing syncs them, so a change to either one has to be copied across by hand.
-
-The `scripts/` folder has Node/shell helpers used to regenerate per-folder READMEs and rebuild `projects_data.js`.
-
-## Running individual projects
-
-There's no single build for the whole repo — each project runs on its own. Check the language folder's README, then run with the usual toolchain:
-
-```bash
-# Go
-cd go/hard/load-balancer && go run .
-
-# Rust
-cd rust/expert/async-executor && cargo run
-
-# Python
-cd python/medium/2048 && python3 main.py
-
-# Node — each project is a single file, install only what it imports
-cd nodejs/medium/url-shortener && npm install express body-parser && node index.js
-```
-
-## Scope, honestly
-
-This is a personal practice archive, not a product. Difficulty tiers reflect how involved each build is, from one-file exercises up to multi-module projects. The `easy` tiers are deliberately simple. The site and CI wiring exist to make browsing and deploying the collection less manual.
+Site, per-project run commands and the full layout: [docs/ARCHIVE.md](./docs/ARCHIVE.md).
 
 ## License
 
-[MIT](./LICENSE) — Sudhanshu Singh
+[MIT](./LICENSE) - Sudhanshu Singh

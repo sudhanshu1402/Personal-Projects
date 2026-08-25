@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="424" viewBox="0 0 880 424" role="img" aria-label="Inventory of the archive. Projects by language folder: python 16, cpp 10, c 9, csharp 9, go 8, java 8, javascript 8, nodejs 8, php 8, rust 8, typescript 8. Topic folders: machine-learning-basics 4, android 2, dbms 2, machine-learning 1. Most common source files: .cpp 77, .py 47, .java 37, .html 30, .js 13, .jsp 12. 1,011 project files, 142 READMEs, 67 dsa solutions across 7 topics">
+  <rect width="880" height="424" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
+    <text x="20" y="30" fill="#e6edf3" font-size="14" font-weight="600">what is in the archive, counted from the tracked file list</text>
+    <rect x="20" y="46" width="450" height="332" rx="8" fill="#161b22" stroke="#30363d"/>
+    <text x="36" y="72" fill="#7d8590" font-size="11" letter-spacing="1">PROJECTS BY LANGUAGE FOLDER  (100 total)</text>
+    <text x="36" y="100" fill="#c9d1d9" font-size="12">python</text>
+    <rect x="148" y="91" width="150" height="11" rx="3" fill="#3fb950"/>
+    <text x="310" y="100" fill="#c9d1d9" font-size="12">16</text>
+    <text x="36" y="125" fill="#c9d1d9" font-size="12">cpp</text>
+    <rect x="148" y="116" width="94" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="125" fill="#c9d1d9" font-size="12">10</text>
+    <text x="36" y="150" fill="#c9d1d9" font-size="12">c</text>
+    <rect x="148" y="141" width="84" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="150" fill="#c9d1d9" font-size="12">9</text>
+    <text x="36" y="175" fill="#c9d1d9" font-size="12">csharp</text>
+    <rect x="148" y="166" width="84" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="175" fill="#c9d1d9" font-size="12">9</text>
+    <text x="36" y="200" fill="#c9d1d9" font-size="12">go</text>
+    <rect x="148" y="191" width="75" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="200" fill="#c9d1d9" font-size="12">8</text>
+    <text x="36" y="225" fill="#c9d1d9" font-size="12">java</text>
+    <rect x="148" y="216" width="75" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="225" fill="#c9d1d9" font-size="12">8</text>
+    <text x="36" y="250" fill="#c9d1d9" font-size="12">javascript</text>
+    <rect x="148" y="241" width="75" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="250" fill="#c9d1d9" font-size="12">8</text>
+    <text x="36" y="275" fill="#c9d1d9" font-size="12">nodejs</text>
+    <rect x="148" y="266" width="75" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="275" fill="#c9d1d9" font-size="12">8</text>
+    <text x="36" y="300" fill="#c9d1d9" font-size="12">php</text>
+    <rect x="148" y="291" width="75" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="300" fill="#c9d1d9" font-size="12">8</text>
+    <text x="36" y="325" fill="#c9d1d9" font-size="12">rust</text>
+    <rect x="148" y="316" width="75" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="325" fill="#c9d1d9" font-size="12">8</text>
+    <text x="36" y="350" fill="#c9d1d9" font-size="12">typescript</text>
+    <rect x="148" y="341" width="75" height="11" rx="3" fill="#58a6ff"/>
+    <text x="310" y="350" fill="#c9d1d9" font-size="12">8</text>
+    <rect x="490" y="46" width="370" height="150" rx="8" fill="#161b22" stroke="#30363d"/>
+    <text x="506" y="72" fill="#7d8590" font-size="11" letter-spacing="1">TOPIC FOLDERS  (9 projects)</text>
+    <text x="506" y="100" fill="#c9d1d9" font-size="12">machine-learning-basics</text>
+    <text x="718" y="100" fill="#c9d1d9" font-size="12">4</text>
+    <text x="506" y="124" fill="#c9d1d9" font-size="12">android</text>
+    <text x="718" y="124" fill="#c9d1d9" font-size="12">2</text>
+    <text x="506" y="148" fill="#c9d1d9" font-size="12">dbms</text>
+    <text x="718" y="148" fill="#c9d1d9" font-size="12">2</text>
+    <text x="506" y="172" fill="#c9d1d9" font-size="12">machine-learning</text>
+    <text x="718" y="172" fill="#c9d1d9" font-size="12">1</text>
+    <rect x="490" y="212" width="370" height="166" rx="8" fill="#161b22" stroke="#30363d"/>
+    <text x="506" y="240" fill="#7d8590" font-size="11" letter-spacing="1">SOURCE FILES BY TYPE</text>
+    <text x="506" y="262" fill="#c9d1d9" font-size="12">.cpp</text>
+    <text x="718" y="262" fill="#c9d1d9" font-size="12">77</text>
+    <text x="506" y="284" fill="#c9d1d9" font-size="12">.py</text>
+    <text x="718" y="284" fill="#c9d1d9" font-size="12">47</text>
+    <text x="506" y="306" fill="#c9d1d9" font-size="12">.java</text>
+    <text x="718" y="306" fill="#c9d1d9" font-size="12">37</text>
+    <text x="506" y="328" fill="#c9d1d9" font-size="12">.html</text>
+    <text x="718" y="328" fill="#c9d1d9" font-size="12">30</text>
+    <text x="506" y="350" fill="#c9d1d9" font-size="12">.js</text>
+    <text x="718" y="350" fill="#c9d1d9" font-size="12">13</text>
+    <text x="506" y="372" fill="#c9d1d9" font-size="12">.jsp</text>
+    <text x="718" y="372" fill="#c9d1d9" font-size="12">12</text>
+    <text x="20" y="404" fill="#7d8590" font-size="12">1,011 project files, 142 READMEs, 67 dsa solutions across 7 topics</text>
+  </g>
+</svg>

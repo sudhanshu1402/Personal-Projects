@@ -33,6 +33,13 @@ jobs:
       if: matrix.language == 'javascript'
       run: node scripts/check-vault.mjs
 
+    - name: Redraw the README images from the tracked file list
+      if: matrix.language == 'javascript'
+      run: |
+        node scripts/make-readme-svg.mjs
+        git add -A -N assets/
+        git diff --exit-code -- assets
+
     - name: Set up Go
       if: matrix.language == 'go'
       uses: actions/setup-go@v4
